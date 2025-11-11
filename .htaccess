@@ -1,0 +1,33 @@
+# Protección de archivos sensibles
+<FilesMatch "\.(json|txt|log)$">
+    Order Allow,Deny
+    Deny from all
+</FilesMatch>
+
+# Permitir acceso solo a archivos públicos
+<FilesMatch "\.(html|css|js|jpg|jpeg|png|gif|svg|ico|woff|woff2|ttf|webp)$">
+    Order Allow,Deny
+    Allow from all
+</FilesMatch>
+
+# Proteger el directorio data
+<Directory "data">
+    Order Deny,Allow
+    Deny from all
+</Directory>
+
+# Habilitar PHP
+<FilesMatch "\.php$">
+    Order Allow,Deny
+    Allow from all
+</FilesMatch>
+
+# Seguridad adicional
+Options -Indexes
+ServerSignature Off
+
+# Prevenir acceso directo al archivo .htaccess
+<Files .htaccess>
+    Order Allow,Deny
+    Deny from all
+</Files>

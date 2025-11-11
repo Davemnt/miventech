@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test WhatsApp</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 50px;
+            text-align: center;
+        }
+        .test-btn {
+            display: inline-block;
+            background: #25D366;
+            color: white;
+            padding: 20px 40px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-size: 20px;
+            margin: 10px;
+        }
+        .test-btn:hover {
+            background: #128C7E;
+        }
+        .info {
+            margin: 20px;
+            padding: 20px;
+            background: #f0f0f0;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>🧪 Test de WhatsApp</h1>
+    
+    <div class="info">
+        <h2>Número configurado:</h2>
+        <p><strong>549 11 22230869</strong></p>
+        <p>Formato: +54 9 11 2223-0869</p>
+    </div>
+
+    <h3>Prueba estos enlaces:</h3>
+    
+    <!-- Enlace directo sin mensaje -->
+    <a href="https://wa.me/5491122230869" target="_blank" class="test-btn">
+        📱 Test 1: Sin mensaje
+    </a>
+    <br>
+    
+    <!-- Enlace con mensaje -->
+    <a href="https://wa.me/5491122230869?text=Hola!%20Quiero%20consultar%20sobre%20sus%20servicios" target="_blank" class="test-btn">
+        📱 Test 2: Con mensaje
+    </a>
+    <br>
+    
+    <!-- Botón dinámico con JavaScript -->
+    <a href="#" id="dynamicWhatsApp" class="test-btn">
+        📱 Test 3: Dinámico (JS)
+    </a>
+
+    <script>
+        // Test dinámico
+        document.addEventListener('DOMContentLoaded', () => {
+            const btn = document.getElementById('dynamicWhatsApp');
+            const country = '549';
+            const area = '11';
+            const number = '22230869';
+            const whatsappNumber = country + area + number;
+            const message = encodeURIComponent('Hola! Quiero consultar sobre sus servicios');
+            
+            btn.href = `https://wa.me/${whatsappNumber}?text=${message}`;
+            
+            console.log('✅ WhatsApp configurado:', btn.href);
+        });
+    </script>
+
+    <div class="info" style="margin-top: 40px;">
+        <h3>✅ Si alguno funciona:</h3>
+        <p>El problema está en el archivo main.js o en la caché del navegador</p>
+        <p><strong>Solución:</strong> Presiona Ctrl+F5 en index.html</p>
+        
+        <h3>❌ Si ninguno funciona:</h3>
+        <p>El número puede estar mal o WhatsApp no está instalado</p>
+        <p>Verifica que tengas WhatsApp en tu celular/computadora</p>
+    </div>
+</body>
+</html>

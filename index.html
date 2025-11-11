@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MivenTech</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <body>
+    <header class="fixed top-0 left-0 w-full py-4 navbar-solid z-50">
+      <nav class="container mx-auto flex items-center justify-between px-6">
+        <img src="/assets/images/logo.png" alt="MivenTech Logo" style="max-height: 40px; width: auto;" />
+        <button class="md:hidden text-white focus:outline-none" id="navbar-toggle">
+          <i class="fas fa-bars text-2xl"></i>
+        </button>
+        <div class="hidden md:flex items-center space-x-8" id="navbar-links">
+          <a href="#home" class="nav-link text-white text-base font-medium">Home</a>
+          <a href="#about" class="nav-link text-white text-base font-medium">Sobre Nosotros</a>
+          <a href="#services" class="nav-link text-white text-base font-medium">Servicios</a>
+          <a href="#webdev" class="nav-link text-white text-base font-medium">Desarrollo Web</a>
+          <a href="#contact" class="btn-primary">Contacto</a>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section id="home" class="min-h-screen flex items-center py-20" style="background-color: white;">
+        <div class="container mx-auto px-6">
+          <div class="grid md:grid-cols-2 gap-16 items-center max-w-7xl mx-auto">
+            <div class="fade-in-left space-y-8">
+              <h1 class="text-4xl md:text-6xl lg:text-6xl font-extrabold leading-tight" style="color: #151414; line-height: 1.2;">
+                Tu <span class="gradient-text">Tecnología</span> <br> en las mejores manos
+              </h1>
+              <p class="text-xl md:text-1xl leading-relaxed" style="color: #878787; line-height: 1.6;">
+                Reparación, mantenimiento y desarrollo web. Soluciones rápidas y confiables para que tu equipo funcione como nuevo.
+              </p>
+              <div class="flex flex-wrap gap-4 pt-4">
+                <a href="#services" class="btn-primary">Ver Servicios</a>
+                <a href="#contact" class="px-8 py-4 rounded-full font-semibold transition-all duration-300" style="border: 2px solid #ff6b35; color: #ff6b35;">
+                  Hablemos
+                </a>
+              </div>
+            </div>
+            <div class="fade-in-right flex justify-center items-center">
+              <img 
+                src="/assets/images/home-miven.png" 
+                alt="Tecnología y reparación de computadoras" 
+                class="w-full h-auto"
+                style="max-width: 150%; transform: scale(1.2);"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="about" class="section-padding" style="background-color: #151414;">
+        <div class="container mx-auto px-6">
+          <h2 class="text-4xl md:text-5xl font-bold text-center mb-16 fade-in" style="color: #f4f4f4;">
+            ¿Quiénes <span class="gradient-text">Somos?</span>
+          </h2>
+          <div class="grid md:grid-cols-1 gap-12 items-center max-w-3xl mx-auto">
+            <div class="text-center fade-in delay-200">
+              <p class="text-lg leading-relaxed mb-6" style="color: #878787;">
+                Somos un emprendimiento local nacido de la pasión por la tecnología y las ganas de ayudar. En MivenTech nos dedicamos a que tu computadora vuelva a funcionar como el primer día, sin complicaciones.
+              </p>
+              <p class="text-lg leading-relaxed mb-6" style="color: #878787;">
+                Ofrecemos mantenimiento y reparación de equipos, además de desarrollo web para quienes quieren tener presencia online. Trabajamos con honestidad, buscando siempre la mejor solución para vos.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="services" class="section-padding" style="background-color: #f4f4f4;">
+        <div class="container mx-auto px-6">
+          <h2 class="text-4xl md:text-5xl font-bold text-center mb-16 fade-in" style="color: #151414;">
+            ¿Qué <span class="gradient-text">Hacemos?</span>
+          </h2>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+            <div class="bg-white rounded-2xl p-8 card-hover scale-in delay-100" style="box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);">
+              <div class="service-icon">
+                <i class="fas fa-tools text-4xl text-white"></i>
+              </div>
+              <h3 class="text-2xl font-bold mb-4 text-center" style="color: #151414;">Reparación y Mantenimiento</h3>
+              <ul class="space-y-3" style="color: #878787;">
+                <li class="flex items-start">
+                  <i class="fas fa-check-circle mt-1 mr-3" style="color: #ff6b35;"></i>
+                  <span>Limpieza y mantenimiento preventivo</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fas fa-check-circle mt-1 mr-3" style="color: #ff6b35;"></i>
+                  <span>Reparación de computadoras y notebooks</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fas fa-check-circle mt-1 mr-3" style="color: #ff6b35;"></i>
+                  <span>Reparación de monitores</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fas fa-check-circle mt-1 mr-3" style="color: #ff6b35;"></i>
+                  <span>Cambio de componentes (RAM, disco, etc.)</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fas fa-check-circle mt-1 mr-3" style="color: #ff6b35;"></i>
+                  <span>Diagnóstico y presupuesto </span>
+                </li>
+              </ul>
+            </div>
+
+            <div class="bg-white rounded-2xl p-8 card-hover scale-in delay-300" style="box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);">
+              <div class="service-icon">
+                <i class="fas fa-cog text-4xl text-white"></i>
+              </div>
+              <h3 class="text-2xl font-bold mb-4 text-center" style="color: #151414;">Instalación y Configuración</h3>
+              <ul class="space-y-3" style="color: #878787;">
+                <li class="flex items-start">
+                  <i class="fas fa-check-circle mt-1 mr-3" style="color: #ff6b35;"></i>
+                  <span>Instalación de Windows y programas</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fas fa-check-circle mt-1 mr-3" style="color: #ff6b35;"></i>
+                  <span>Formateo y respaldo de datos</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fas fa-check-circle mt-1 mr-3" style="color: #ff6b35;"></i>
+                  <span>Eliminación de virus y malware</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fas fa-check-circle mt-1 mr-3" style="color: #ff6b35;"></i>
+                  <span>Optimización de rendimiento</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fas fa-check-circle mt-1 mr-3" style="color: #ff6b35;"></i>
+                  <span>Asesoramiento personalizado</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="webdev" class="section-padding" style="background-color: #151414;">
+        <div class="container mx-auto px-6">
+          <h2 class="text-4xl md:text-5xl font-bold text-center mb-8 fade-in" style="color: #f4f4f4;">
+            Desarrollo <span class="gradient-text">Web</span>
+          </h2>
+          <p class="text-xl text-center mb-16 max-w-3xl mx-auto fade-in delay-200" style="color: #878787;">
+            Creamos sitios web modernos que se ven bien en cualquier dispositivo y te ayudan a crecer
+          </p>
+          
+          <div class="grid md:grid-cols-2 gap-12 items-start max-w-6xl mx-auto">
+            <div class="space-y-6">
+              <div class="feature-card fade-in-left delay-100">
+                <div class="flex items-start gap-4">
+                  <div class="service-icon" style="width: 60px; height: 60px; min-width: 60px;">
+                    <i class="fas fa-mobile-alt text-2xl text-white"></i>
+                  </div>
+                  <div>
+                    <h3 class="text-2xl font-bold mb-3" style="color: #f4f4f4;">Diseño Responsive</h3>
+                    <p style="color: #878787;">
+                      Tu página web se verá perfecta en celulares, tablets y computadoras. Usamos tecnologías modernas como HTML5, CSS3, JavaScript y React para crear sitios que cargan rápido y se ven increíbles.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="feature-card fade-in-left delay-300">
+                <div class="flex items-start gap-4">
+                  <div class="service-icon" style="width: 60px; height: 60px; min-width: 60px;">
+                    <i class="fas fa-globe text-2xl text-white"></i>
+                  </div>
+                  <div>
+                    <h3 class="text-2xl font-bold mb-3" style="color: #f4f4f4;">Sitios Web Personalizados</h3>
+                    <p style="color: #878787;">
+                      Creamos tu página desde cero, pensada para tu negocio. Landing pages, sitios de presentación, portfolios y más. Todo optimizado para aparecer en Google y convertir visitas en clientes.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="feature-card fade-in-left delay-500">
+                <div class="flex items-start gap-4">
+                  <div class="service-icon" style="width: 60px; height: 60px; min-width: 60px;">
+                    <i class="fas fa-rocket text-2xl text-white"></i>
+                  </div>
+                  <div>
+                    <h3 class="text-2xl font-bold mb-3" style="color: #f4f4f4;">Mejoramos tu Web Actual</h3>
+                    <p style="color: #878787;">
+                      ¿Ya tenés un sitio pero anda lento o no se ve bien? Lo revisamos y optimizamos para que funcione mejor, cargue más rápido y aparezca en las búsquedas de Google.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="flex items-start justify-center pt-8 fade-in-right">
+              <dotlottie-wc
+                src="https://lottie.host/d574364a-b84b-4710-9cca-de3e355da094/diWmRmTN3x.lottie"
+                style="width: 100%; max-width: 600px; height: 600px;"
+                autoplay
+                loop
+              ></dotlottie-wc>
+            </div>
+          </div>
+
+          <div class="bg-gradient-to-r from-orange-500 to-orange-600 rounded-2xl p-8 md:p-12 text-white text-center mt-16 max-w-4xl mx-auto fade-in delay-400">
+            <h3 class="text-3xl font-bold mb-4">¿Tenés una idea? ¡Hagámosla realidad!</h3>
+            <p class="text-xl mb-6 opacity-90">
+              Contanos tu proyecto y te ayudamos a llevarlo a internet
+            </p>
+            <a href="#contact" class="inline-block bg-white text-orange-600 px-8 py-4 rounded-full font-bold hover:bg-gray-100 transition-all duration-300">
+              Hablemos de tu proyecto
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="section-padding" style="background-color: #f4f4f4;">
+        <div class="container mx-auto px-6">
+          <h2 class="text-4xl md:text-5xl font-bold text-center mb-16 fade-in" style="color: #151414;">
+            Contáctanos
+          </h2>
+          <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-start">
+            <div class="fade-in-left">
+              <h3 class="text-3xl font-bold mb-6" style="color: #ff6b35;">
+                ¡Hablemos! Contanos tu proyecto
+              </h3>
+              <p class="text-lg mb-8" style="color: #878787;">
+                Completá el formulario y nos pondremos en contacto a la brevedad. Estamos para ayudarte con lo que necesites.
+              </p>
+              
+              <div id="formAlert" style="display: none;"></div>
+              
+              <form class="space-y-6" id="contactForm">
+                <div>
+                  <label for="name" class="block text-lg font-medium mb-2" style="color: #151414;">Nombre</label>
+                  <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    required
+                    class="w-full px-4 py-3 rounded-lg border-2 border-gray-300 focus:border-orange-500 focus:outline-none transition-colors"
+                    placeholder="Tu nombre"
+                  />
+                </div>
+                <div>
+                  <label for="email" class="block text-lg font-medium mb-2" style="color: #151414;">Email</label>
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    required
+                    class="w-full px-4 py-3 rounded-lg border-2 border-gray-300 focus:border-orange-500 focus:outline-none transition-colors"
+                    placeholder="tu@email.com"
+                  />
+                </div>
+                <div>
+                  <label for="message" class="block text-lg font-medium mb-2" style="color: #151414;">Mensaje</label>
+                  <textarea
+                    id="message"
+                    name="message"
+                    rows="4"
+                    required
+                    class="w-full px-4 py-3 rounded-lg border-2 border-gray-300 focus:border-orange-500 focus:outline-none transition-colors"
+                    placeholder="Contanos en qué podemos ayudarte..."
+                  ></textarea>
+                </div>
+                <button type="submit" id="submitBtn" class="btn-primary w-full text-center">
+                  Enviar Mensaje
+                </button>
+              </form>
+            </div>
+            
+            <div class="flex items-center justify-center fade-in-right">
+              <dotlottie-wc
+                src="https://lottie.host/85296ea6-ef48-40c9-976b-6e822be9dfe5/TTRBfrNhGb.lottie"
+                style="width: 100%; max-width: 600px; height: 600px;"
+                autoplay
+                loop
+              ></dotlottie-wc>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <a
+      href="https://wa.me/5491122230869?text=Hola!%20Quiero%20consultar%20sobre%20sus%20servicios"
+      id="whatsappButton"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="whatsapp-float"
+      aria-label="Contactar por WhatsApp"
+    >
+      <i class="fab fa-whatsapp text-white text-3xl"></i>
+    </a>
+
+    <footer class="py-12" style="background-color: #151414;">
+      <div class="container mx-auto px-6">
+        <div class="grid md:grid-cols-3 gap-8 mb-8">
+          <div>
+            <h4 class="text-2xl font-bold text-white mb-4">
+              <span class="gradient-text">Miven</span>Tech
+            </h4>
+            <p style="color: #878787;">
+              Tu tecnología en las mejores manos. Soluciones locales, rápidas y confiables.
+            </p>
+          </div>
+          <div>
+            <h4 class="text-xl font-bold text-white mb-4">Enlaces</h4>
+            <ul class="space-y-2">
+              <li><a href="#home" class="hover:text-orange-500 transition-colors" style="color: #878787;">Home</a></li>
+              <li><a href="#about" class="hover:text-orange-500 transition-colors" style="color: #878787;">Sobre Nosotros</a></li>
+              <li><a href="#services" class="hover:text-orange-500 transition-colors" style="color: #878787;">Servicios</a></li>
+              <li><a href="#webdev" class="hover:text-orange-500 transition-colors" style="color: #878787;">Desarrollo Web</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="text-xl font-bold text-white mb-4">Seguinos</h4>
+            <div class="flex gap-4">
+              <a href="#" class="w-10 h-10 rounded-full flex items-center justify-center hover:bg-orange-500 transition-all" style="background-color: #878787;">
+                <i class="fab fa-facebook-f text-white"></i>
+              </a>
+              <a href="#" class="w-10 h-10 rounded-full flex items-center justify-center hover:bg-orange-500 transition-all" style="background-color: #878787;">
+                <i class="fab fa-instagram text-white"></i>
+              </a>
+              <a href="#" class="w-10 h-10 rounded-full flex items-center justify-center hover:bg-orange-500 transition-all" style="background-color: #878787;">
+                <i class="fab fa-linkedin-in text-white"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="border-t pt-8 text-center" style="border-color: #878787;">
+          <p style="color: #878787;">© 2025 MivenTech. Todos los derechos reservados.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://unpkg.com/@lottiefiles/dotlottie-wc@0.8.5/dist/dotlottie-wc.js" type="module"></script>
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>
