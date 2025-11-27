@@ -1,71 +1,175 @@
 <!DOCTYPE html>
+<!-- Declaración de tipo de documento HTML5 - Define que usamos la versión más reciente de HTML -->
 <html lang="es">
+  <!-- Etiqueta html con idioma español para SEO y accesibilidad -->
   <head>
+    <!-- Sección head: contiene metadatos, estilos y scripts que no se ven en la página -->
+    
+    <!-- Codificación de caracteres UTF-8 para soportar caracteres especiales -->
     <meta charset="UTF-8" />
+    
+    <!-- Viewport para diseño responsive - hace que la página se vea bien en móviles -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>MIVENTECH</title>
+    
+    <!-- TITULO PRINCIPAL - Aparece en la pestaña del navegador y en resultados de Google -->
+    <title>MIVENTECH - Servicio Técnico y Desarrollo Web | Reparación de PC y Sitios Web</title>
+    
+    <!-- META DESCRIPTION - Descripción que aparece en Google bajo el título -->
+    <meta name="description" content="MIVENTECH ofrece servicio técnico de computadoras, reparación de PC, mantenimiento preventivo y desarrollo web en Argentina. Soluciones tecnológicas confiables para tu negocio." />
+    
+    <!-- PALABRAS CLAVE para SEO -->
+    <meta name="keywords" content="servicio técnico, reparación computadoras, desarrollo web, mantenimiento PC, soporte técnico, diseño web responsive, Argentina" />
+    
+    <!-- METADATOS PARA REDES SOCIALES (Open Graph) -->
+    <meta property="og:title" content="MIVENTECH - Servicio Técnico y Desarrollo Web" />
+    <meta property="og:description" content="Tu tecnología en óptimas condiciones. Servicio técnico, reparación de PC y desarrollo web profesional." />
+    <meta property="og:image" content="https://miventech.com/assets/images/logo.png" />
+    <meta property="og:url" content="https://miventech.com" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="MIVENTECH" />
+    
+    <!-- METADATOS PARA TWITTER -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="MIVENTECH - Servicio Técnico y Desarrollo Web" />
+    <meta name="twitter:description" content="Tu tecnología en óptimas condiciones. Servicio técnico y desarrollo web profesional." />
+    <meta name="twitter:image" content="https://miventech.com/assets/images/logo.png" />
+    
+    <!-- INFORMACIÓN DEL SITIO -->
+    <meta name="author" content="MIVENTECH" />
+    <meta name="robots" content="index, follow" />
+    <meta name="revisit-after" content="7 days" />
+    
+    <!-- FAVICON - Icono que aparece en la pestaña del navegador -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    
+    <!-- URL CANÓNICA - Evita contenido duplicado en Google -->
+    <link rel="canonical" href="https://miventech.com/" />
+    
+    <!-- MANIFEST PWA - Convierte el sitio en Progressive Web App -->
+    <link rel="manifest" href="/manifest.json" />
+    
+    <!-- FRAMEWORK CSS TAILWIND - Para estilos rápidos y responsive -->
     <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- ICONOS FONT AWESOME - Para iconos vectoriales -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet" />
+    
+    <!-- FUENTE GOOGLE FONTS - Tipografía Inter para mejor legibilidad -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+    
+    <!-- ESTILOS PERSONALIZADOS - Nuestras reglas CSS específicas -->
     <link rel="stylesheet" href="assets/css/style.css" />
   </head>
   <body>
+    <!-- CUERPO PRINCIPAL - Todo el contenido visible de la página -->
+    
+    <!-- HEADER/NAVEGACIÓN - Menú principal fijo en la parte superior -->
     <header class="fixed top-0 left-0 w-full py-4 navbar-solid z-50">
+      <!-- Header fijo (fixed) que se mantiene visible al hacer scroll -->
+      <!-- z-50 = z-index alto para que esté sobre otros elementos -->
+      
       <nav class="container mx-auto flex items-center justify-between px-6">
+        <!-- Navegación principal con flexbox para distribuir elementos -->
+        
+        <!-- LOGO - Imagen del logotipo de la empresa -->
         <img src="/assets/images/logo.png" alt="MivenTech Logo" style="max-height: 30px; width: auto;" />
+        
+        <!-- BOTÓN HAMBURGUESA - Solo visible en móviles (md:hidden) -->
         <button class="md:hidden text-white focus:outline-none" id="navbar-toggle">
+          <!-- Icono de menú hamburguesa para dispositivos móviles -->
           <i class="fas fa-bars text-2xl"></i>
         </button>
+        
+        <!-- MENÚ DE NAVEGACIÓN - Oculto en móviles, visible en desktop (hidden md:flex) -->
         <div class="hidden md:flex items-center space-x-8" id="navbar-links">
+          <!-- Enlaces de navegación interna usando anclas (#) -->
           <a href="#home" class="nav-link text-white text-base font-medium">Home</a>
           <a href="#about" class="nav-link text-white text-base font-medium">Sobre Nosotros</a>
           <a href="#services" class="nav-link text-white text-base font-medium">Servicios</a>
           <a href="#webdev" class="nav-link text-white text-base font-medium">Desarrollo Web</a>
+          <!-- Botón de contacto con estilo especial (CTA - Call to Action) -->
           <a href="#contact" class="btn-primary">Contacto</a>
         </div>
       </nav>
     </header>
 
+    <!-- CONTENIDO PRINCIPAL - Todas las secciones de la página -->
     <main>
+      
+      <!-- SECCIÓN HOME/HERO - Primera impresión, lo más importante -->
       <section id="home" class="min-h-screen flex items-center py-20" style="background-color: white;">
+        <!-- Sección de altura completa de pantalla (min-h-screen) -->
+        <!-- flex items-center centra verticalmente el contenido -->
+        
         <div class="container mx-auto px-6">
+          <!-- Contenedor principal con márgenes automáticos para centrar -->
+          
           <div class="grid md:grid-cols-2 gap-16 items-center max-w-7xl mx-auto">
+            <!-- Grid de 2 columnas en desktop, 1 en móvil -->
+            
+            <!-- COLUMNA IZQUIERDA - Texto principal y botones -->
             <div class="fade-in-left space-y-8">
+              <!-- Animación de entrada desde la izquierda -->
+              
+              <!-- TÍTULO PRINCIPAL H1 - Más importante para SEO -->
               <h1 class="text-4xl md:text-6xl lg:text-6xl font-extrabold leading-tight" style="color: #151414; line-height: 1.2;">
                 Tu tecnologia en <span class="gradient-text">OPTIMAS </span> <br> condiciones
               </h1>
+              
+              <!-- SUBTÍTULO - Descripción del servicio -->
               <p class="text-xl md:text-1xl leading-relaxed" style="color: #878787; line-height: 1.6;">
                 Servicio técnico, mantenimiento y soporte IT de confianza. 
               </p>
+              
+              <!-- BOTONES DE ACCIÓN (CTA - Call to Action) -->
               <div class="flex flex-wrap gap-4 pt-4">
+                <!-- Botón principal - dirige a servicios -->
                 <a href="#services" class="btn-primary">Ver Servicios</a>
+                <!-- Botón secundario - dirige a contacto -->
                 <a href="#contact" class="px-8 py-4 rounded-full font-semibold transition-all duration-300" style="border: 2px solid #ff6b35; color: #ff6b35;">
                   Hablemos
                 </a>
               </div>
             </div>
+            
+            <!-- COLUMNA DERECHA - Imagen principal -->
             <div class="fade-in-right flex justify-center items-center">
+              <!-- Animación de entrada desde la derecha -->
+              
+              <!-- IMAGEN HERO - Visual principal que representa el servicio -->
               <img 
                 src="/assets/images/home-miven.png" 
-                alt="Tecnología y reparación de computadoras" 
+                alt="Tecnología y reparación de computadoras - Servicio técnico profesional" 
                 class="w-full h-auto"
                 style="max-width: 150%; transform: scale(1.2);"
               />
+              <!-- Alt text detallado para SEO y accesibilidad -->
             </div>
           </div>
         </div>
       </section>
 
+      <!-- SECCIÓN SOBRE NOSOTROS - Información de la empresa -->
       <section id="about" class="section-padding" style="background-color: #151414;">
+        <!-- Fondo oscuro para contraste visual -->
+        
         <div class="container mx-auto px-6">
+          <!-- TÍTULO DE SECCIÓN H2 - Importante para estructura SEO -->
           <h2 class="text-4xl md:text-5xl font-bold text-center mb-16 fade-in" style="color: #f4f4f4;">
             ¿Quiénes <span class="gradient-text">Somos?</span>
           </h2>
+          
+          <!-- CONTENIDO DE LA SECCIÓN -->
           <div class="grid md:grid-cols-1 gap-12 items-center max-w-3xl mx-auto">
+            <!-- Una sola columna centrada para mejor legibilidad -->
+            
             <div class="text-center fade-in delay-200">
+              <!-- PÁRRAFO 1 - Historia y misión de la empresa -->
               <p class="text-lg leading-relaxed mb-6" style="color: #878787;">
                 Somos un emprendimiento local nacido de la pasión por la tecnología y las ganas de ayudar. En MIVENTECH nos dedicamos a que tu computadora vuelva a funcionar como el primer día, sin complicaciones.
               </p>
+              
+              <!-- PÁRRAFO 2 - Servicios y valores -->
               <p class="text-lg leading-relaxed mb-6" style="color: #878787;">
                 Ofrecemos mantenimiento y reparación de equipos, además de desarrollo web para quienes quieren tener presencia online. Trabajamos con honestidad, buscando siempre la mejor solución para vos.
               </p>
@@ -74,18 +178,36 @@
         </div>
       </section>
 
+      <!-- SECCIÓN SERVICIOS - Qué ofrecemos a los clientes -->
       <section id="services" class="section-padding" style="background-color: #f4f4f4;">
+        <!-- Fondo gris claro para diferenciar de otras secciones -->
+        
         <div class="container mx-auto px-6">
+          <!-- TÍTULO DE SERVICIOS -->
           <h2 class="text-4xl md:text-5xl font-bold text-center mb-16 fade-in" style="color: #151414;">
             ¿Qué <span class="gradient-text">Hacemos?</span>
           </h2>
+          
+          <!-- GRID DE TARJETAS DE SERVICIOS -->
           <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+            <!-- 2 columnas en desktop, 1 en móvil -->
+            
+            <!-- TARJETA 1: REPARACIÓN Y MANTENIMIENTO -->
             <div class="bg-white rounded-2xl p-8 card-hover scale-in delay-100" style="box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);">
+              <!-- Tarjeta blanca con sombra y bordes redondeados -->
+              <!-- card-hover = efecto hover, scale-in = animación de entrada -->
+              
+              <!-- ICONO DEL SERVICIO -->
               <div class="service-icon">
                 <i class="fas fa-tools text-4xl text-white"></i>
               </div>
+              
+              <!-- TÍTULO DEL SERVICIO H3 -->
               <h3 class="text-2xl font-bold mb-4 text-center" style="color: #151414;">Reparación y Mantenimiento</h3>
+              
+              <!-- LISTA DE CARACTERÍSTICAS/BENEFICIOS -->
               <ul class="space-y-3" style="color: #878787;">
+                <!-- Cada item con icono de check y descripción -->
                 <li class="flex items-start">
                   <i class="fas fa-check-circle mt-1 mr-3" style="color: #ff6b35;"></i>
                   <span>Limpieza y mantenimiento preventivo</span>
@@ -109,11 +231,19 @@
               </ul>
             </div>
 
+            <!-- TARJETA 2: INSTALACIÓN Y CONFIGURACIÓN -->
             <div class="bg-white rounded-2xl p-8 card-hover scale-in delay-300" style="box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);">
+              <!-- Misma estructura que la tarjeta anterior pero con delay diferente en la animación -->
+              
+              <!-- ICONO DEL SERVICIO -->
               <div class="service-icon">
                 <i class="fas fa-cog text-4xl text-white"></i>
               </div>
+              
+              <!-- TÍTULO DEL SERVICIO H3 -->
               <h3 class="text-2xl font-bold mb-4 text-center" style="color: #151414;">Instalación y Configuración</h3>
+              
+              <!-- LISTA DE CARACTERÍSTICAS/BENEFICIOS -->
               <ul class="space-y-3" style="color: #878787;">
                 <li class="flex items-start">
                   <i class="fas fa-check-circle mt-1 mr-3" style="color: #ff6b35;"></i>
@@ -286,6 +416,7 @@
       </section>
     </main>
 
+    <!-- BOTÓN FLOTANTE DE WHATSAPP - Contacto rápido -->
     <a
       href="https://wa.me/5491122230869?text=Hola!%20Quiero%20consultar%20sobre%20sus%20servicios"
       id="whatsappButton"
@@ -294,27 +425,43 @@
       class="whatsapp-float"
       aria-label="Contactar por WhatsApp"
     >
+      <!-- Botón fijo en la esquina inferior derecha -->
+      <!-- target="_blank" = abre en nueva pestaña -->
+      <!-- rel="noopener noreferrer" = seguridad para enlaces externos -->
+      <!-- aria-label = accesibilidad para lectores de pantalla -->
       <i class="fab fa-whatsapp text-white text-3xl"></i>
     </a>
 
+    <!-- FOOTER - Pie de página con información adicional -->
     <footer class="py-12" style="background-color: #151414;">
+      <!-- Fondo oscuro para contraste -->
+      
       <div class="container mx-auto px-6">
+        <!-- GRID DE COLUMNAS DEL FOOTER -->
         <div class="grid md:grid-cols-3 gap-8 mb-8">
+          <!-- 3 columnas en desktop, 1 en móvil -->
+          
+          <!-- COLUMNA 1: LOGO Y DESCRIPCIÓN -->
           <div>
             <img src="/assets/images/logo.png" alt="MivenTech Logo" style="max-height: 20px; width: auto;" />
             <p style="color: #878787;">
               Tu tecnología en las mejores manos. 
             </p>
           </div>
+          
+          <!-- COLUMNA 2: ENLACES DE NAVEGACIÓN -->
           <div>
             <h4 class="text-xl font-bold text-white mb-4">Enlaces</h4>
             <ul class="space-y-2">
+              <!-- Lista de enlaces internos del sitio -->
               <li><a href="#home" class="hover:text-orange-500 transition-colors" style="color: #878787;">Home</a></li>
               <li><a href="#about" class="hover:text-orange-500 transition-colors" style="color: #878787;">Sobre Nosotros</a></li>
               <li><a href="#services" class="hover:text-orange-500 transition-colors" style="color: #878787;">Servicios</a></li>
               <li><a href="#webdev" class="hover:text-orange-500 transition-colors" style="color: #878787;">Desarrollo Web</a></li>
             </ul>
           </div>
+          
+          <!-- COLUMNA 3: REDES SOCIALES (COMENTADA - Para uso futuro) -->
           <!-- <div>
             <h4 class="text-xl font-bold text-white mb-4">Seguinos</h4>
             <div class="flex gap-4">
@@ -330,13 +477,23 @@
             </div> -->
           </div>
         </div>
+        
+        <!-- COPYRIGHT - Línea inferior del footer -->
         <div class="border-t pt-8 text-center" style="border-color: #878787;">
+          <!-- Línea separadora superior -->
           <p style="color: #878787;">© 2025 MivenTech. Todos los derechos reservados.</p>
         </div>
       </div>
     </footer>
 
+    <!-- SCRIPTS JAVASCRIPT - Al final para mejor rendimiento -->
+    
+    <!-- SCRIPT LOTTIE - Para animaciones vectoriales interactivas -->
     <script src="https://unpkg.com/@lottiefiles/dotlottie-wc@0.8.5/dist/dotlottie-wc.js" type="module"></script>
+    
+    <!-- SCRIPT PRINCIPAL - Funcionalidades JavaScript personalizadas -->
     <script src="assets/js/main.js"></script>
+    
   </body>
+  <!-- Fin del documento HTML -->
 </html>
