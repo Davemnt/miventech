@@ -1,17 +1,11 @@
-# Archivo robots.txt para MivenTech
-# Este archivo le dice a los motores de búsqueda qué páginas pueden y no pueden indexar
-
-# Permitir que todos los robots accedan a todo el sitio
+# robots.txt para MivenTech
 User-agent: *
 Allow: /
-
-# Bloquear acceso a archivos administrativos y carpetas internas si las hubiera
 Disallow: /admin/
 Disallow: /private/
-Disallow: *.log$
+Disallow: /data/
+Disallow: /*.log$
+Disallow: /*.json$
 
-# Indicar la ubicación del sitemap
+# Sitemap
 Sitemap: https://miventech.com/sitemap.xml
-
-# Crawl-delay opcional (tiempo en segundos entre solicitudes)
-# Crawl-delay: 1

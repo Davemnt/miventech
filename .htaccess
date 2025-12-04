@@ -3,7 +3,17 @@
 
 # ===== PERMITIR ACCESO A ROBOTS.TXT Y SITEMAP.XML =====
 # Estos archivos son esenciales para Google y motores de búsqueda
-<FilesMatch "^(robots\.txt|sitemap\.xml)$">
+<FilesMatch "^(robots\.txt|sitemap\.xml|manifest\.json)$">
+    Order Allow,Deny
+    Allow from all
+    # Headers específicos para sitemap
+    <IfModule mod_headers.c>
+        Header set Content-Type "application/xml; charset=utf-8"
+    </IfModule>
+</FilesMatch>
+
+# Permitir acceso a archivos de verificación de Google
+<FilesMatch "^google[a-z0-9]+\.html$">
     Order Allow,Deny
     Allow from all
 </FilesMatch>
