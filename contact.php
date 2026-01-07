@@ -105,16 +105,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // ============================================ 
     // CARGAR CONFIGURACIÓN SMTP
     // ============================================ 
-    try {
-        $smtp_config = require 'config/smtp_config.php';
-        
-        // Verificar que las credenciales se cargaron correctamente
-        if (empty($smtp_config['smtp_host']) || empty($smtp_config['smtp_username']) || empty($smtp_config['smtp_password'])) {
-            throw new Exception('Configuración SMTP incompleta');
-        }
-        
-    } catch (Exception $e) {
-        error_log('Error en configuración SMTP: ' . $e->getMessage());
+    $smtp_config = require 'config/smtp_config.php';
+    
+    // Verificar que las credenciales estén configuradas
+    if (empty($smtp_config['smtp_username']) || empty($smtp_config['smtp_password'])) {
+        // Las credenciales no están configuradas, pero guardaremos el mensaje de todos modos
+        error_log('⚠️ SMTP no configurado: Archivo .env faltante o credenciales vacías');
         
         // Guardar el contacto de todos modos
         $contact_entry = [
@@ -143,8 +139,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         // Responder con éxito (el mensaje se guardó)
         echo json_encode([
             'success' => true,
-            'message' => '¡Gracias por tu mensaje! Lo hemos recibido y te contactaremos pronto.',
-            'email_sent' => false
+            'message' => '¡Gracias por tu mensaje! Lo hemos recibido y te contactaremos pronto. 📧',
+            'email_sent' => false,
+            'saved' => true,
+            'note' => 'Mensaje guardado. Configuración de email pendiente.'
         ]);
         exit;
     }
