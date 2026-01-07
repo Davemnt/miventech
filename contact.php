@@ -1,4 +1,12 @@
 <?php
+// Cargar PHPMailer
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\Exception;
+
+require 'phpmailer/src/Exception.php';
+require 'phpmailer/src/PHPMailer.php';
+require 'phpmailer/src/SMTP.php';
+
 // Procesamiento del formulario
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     header('Content-Type: application/json');
@@ -89,9 +97,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
     
     // ============================================ 
-    // CONFIGURACIÓN DE EMAIL (CAMBIAR ESTE EMAIL)
+    // CARGAR CONFIGURACIÓN SMTP
     // ============================================ 
-    $to = 'soporte@miventech.com'; // CAMBIAR POR TU EMAIL REAL
+    $smtp_config = require 'config/smtp_config.php';
     $subject = 'Nuevo mensaje de contacto - MIVENTECH';
     
     // Guardar en archivo JSON SIEMPRE (respaldo principal)
@@ -188,14 +196,59 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $headers .= "Reply-To: " . $email . "\r\n";
     $headers .= "X-Mailer: PHP/" . phpversion();
     
-    // Intentar enviar el email (opcional, el guardado ya se hizo)
-    $mail_sent = @mail($to, $subject, $email_body, $headers);
+    // ============================================ 
+    // ENVIAR EMAIL CON PHPMAILER
+    // ============================================ 
+    $mail_sent = false;
+    $mail_error = '';
+    
+    try {
+        $mail = new PHPMailer(true);
+        
+        // Configuración del servidor SMTP
+        $mail->isSMTP();
+        $mail->Host       = $smtp_config['smtp_host'];
+        $mail->SMTPAuth   = true;
+        $mail->Username   = $smtp_config['smtp_username'];
+        $mail->Password   = $smtp_config['smtp_password'];
+        $mail->SMTPSecure = $smtp_config['smtp_secure'];
+        $mail->Port       = $smtp_config['smtp_port'];
+        $mail->CharSet    = $smtp_config['charset'];
+        
+        // Configuración de debug (solo para desarrollo)
+        // $mail->SMTPDebug = 2; // Descomentar para ver errores SMTP
+        
+        // Remitente
+        $mail->setFrom($smtp_config['from_email'], $smtp_config['from_name']);
+        $mail->addReplyTo($email, $name);
+        
+        // Destinatario
+        $mail->addAddress($smtp_config['to_email'], $smtp_config['to_name']);
+        
+        // Contenido del email
+        $mail->isHTML(true);
+        $mail->Subject = $subject;
+        $mail->Body    = $email_body;
+        $mail->AltBody = strip_tags($email_body); // Versión texto plano
+        
+        // Enviar
+        $mail->send();
+        $mail_sent = true;
+        
+    } catch (Exception $e) {
+        $mail_sent = false;
+        $mail_error = $mail->ErrorInfo;
+        
+        // Log del error (opcional)
+        error_log("PHPMailer Error: " . $mail_error);
+    }
     
     // Siempre responder éxito porque el mensaje YA está guardado
     echo json_encode([
         'success' => true,
         'message' => '¡Gracias por tu mensaje! Te contactaremos pronto.',
-        'email_sent' => $mail_sent
+        'email_sent' => $mail_sent,
+        'email_error' => $mail_error
     ]);
     exit;
 }
