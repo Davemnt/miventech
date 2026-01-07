@@ -1,0 +1,21 @@
+# Archivos de entorno con credenciales sensibles
+.env
+
+# Archivos de sistema
+.DS_Store
+Thumbs.db
+
+# Archivos temporales
+*.tmp
+*.log
+*.swp
+*.bak
+
+# Directorio de datos con información sensible
+/data/*.json
+
+# Node modules si usas Node.js
+node_modules/
+
+# Archivos de configuración local
+config/local.php
