@@ -423,21 +423,58 @@
       </section>
     </main>
 
-    <!-- BOTÓN FLOTANTE DE WHATSAPP - Contacto rápido -->
-    <a
-      href="https://wa.me/5491122230869?text=Hola!%20Quiero%20consultar%20sobre%20sus%20servicios"
-      id="whatsappButton"
-      target="_blank"
-      rel="noopener noreferrer"
-      class="whatsapp-float"
-      aria-label="Contactar por WhatsApp"
-    >
-      <!-- Botón fijo en la esquina inferior derecha -->
-      <!-- target="_blank" = abre en nueva pestaña -->
-      <!-- rel="noopener noreferrer" = seguridad para enlaces externos -->
-      <!-- aria-label = accesibilidad para lectores de pantalla -->
-      <i class="fab fa-whatsapp text-white text-3xl"></i>
-    </a>
+    <!-- WIDGET DE CHAT FLOTANTE DE WHATSAPP -->
+    <div id="whatsappWidget" class="whatsapp-widget">
+      <!-- Botón principal flotante -->
+      <div class="whatsapp-float" id="whatsappToggle" aria-label="Abrir chat de WhatsApp">
+        <i class="fab fa-whatsapp text-white text-3xl"></i>
+      </div>
+
+      <!-- Ventana de chat (inicialmente oculta) -->
+      <div class="whatsapp-chat-box" id="whatsappChatBox">
+        <!-- Encabezado del chat -->
+        <div class="whatsapp-chat-header">
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 bg-white rounded-full flex items-center justify-center">
+              <i class="fab fa-whatsapp text-green-600 text-xl"></i>
+            </div>
+            <div>
+              <h4 class="font-semibold text-white">MIVENTECH</h4>
+              <p class="text-xs text-gray-200">Responde en minutos</p>
+            </div>
+          </div>
+          <button id="closeChat" class="text-white hover:text-gray-200 transition">
+            <i class="fas fa-times text-xl"></i>
+          </button>
+        </div>
+
+        <!-- Cuerpo del chat -->
+        <div class="whatsapp-chat-body">
+          <div class="whatsapp-message">
+            <p class="text-sm">¡Hola! 👋</p>
+            <p class="text-sm mt-2">¿En qué podemos ayudarte hoy?</p>
+            <span class="text-xs text-gray-500 mt-2 block">MIVENTECH</span>
+          </div>
+        </div>
+
+        <!-- Pie del chat con textarea -->
+        <div class="whatsapp-chat-footer">
+          <textarea 
+            id="whatsappMessage" 
+            placeholder="Escribe tu mensaje aquí..."
+            rows="2"
+            class="w-full px-4 py-3 border border-gray-300 rounded-lg resize-none focus:outline-none focus:border-green-500 text-sm"
+          ></textarea>
+          <button 
+            id="sendWhatsappBtn" 
+            class="mt-2 w-full bg-green-500 hover:bg-green-600 text-white font-semibold py-3 rounded-lg transition flex items-center justify-center gap-2"
+          >
+            <i class="fab fa-whatsapp text-lg"></i>
+            <span>Enviar por WhatsApp</span>
+          </button>
+        </div>
+      </div>
+    </div>
 
     <!-- FOOTER - Pie de página con información adicional -->
     <footer class="py-12" style="background-color: #151414;">

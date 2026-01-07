@@ -17,26 +17,109 @@ document.addEventListener('DOMContentLoaded', () => {
   const animatedElements = document.querySelectorAll('.fade-in, .fade-in-left, .fade-in-right, .scale-in');
   animatedElements.forEach(el => observer.observe(el));
   
-  // Configurar WhatsApp
-  const whatsappBtn = document.getElementById('whatsappButton');
-  if (whatsappBtn) {
-    // Número ofuscado - cambia estos valores por tu número real
-    const country = '549'; // Código de país Argentina (SIN el +)
-    const area = '11'; // Código de área
-    const number = '22230869'; // Tu número sin el 15
-    
-    // Construir el enlace de forma dinámica
-    const whatsappNumber = country + area + number;
-    const whatsappUrl = 'https://wa.me/' + whatsappNumber;
-    
-    // Mensaje personalizado opcional
-    const message = encodeURIComponent('Hola! Quiero consultar sobre sus servicios');
-    whatsappBtn.href = whatsappUrl + '?text=' + message;
-    
-    console.log('WhatsApp configurado:', whatsappBtn.href); // Para verificar
-  } else {
-    console.error('Botón de WhatsApp no encontrado');
+  // Configurar Widget de WhatsApp
+  const whatsappToggle = document.getElementById('whatsappToggle');
+  const whatsappChatBox = document.getElementById('whatsappChatBox');
+  const closeChat = document.getElementById('closeChat');
+  const sendWhatsappBtn = document.getElementById('sendWhatsappBtn');
+  const whatsappMessage = document.getElementById('whatsappMessage');
+  const contactSection = document.getElementById('contact');
+
+  // Número de WhatsApp (configura tu número aquí)
+  const country = '549'; // Código de país Argentina (SIN el +)
+  const area = '11'; // Código de área
+  const number = '22230869'; // Tu número sin el 15
+  const whatsappNumber = country + area + number;
+
+  // Variable para controlar apertura manual vs automática
+  let manuallyClosedInContact = false;
+
+  // Observer para detectar cuando se entra/sale de la sección de contacto
+  if (contactSection && whatsappChatBox) {
+    const contactObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          // Entrando a la sección de contacto - abrir automáticamente
+          if (!manuallyClosedInContact) {
+            setTimeout(() => {
+              whatsappChatBox.classList.add('active');
+            }, 500); // Pequeño delay para suavizar la transición
+          }
+        } else {
+          // Saliendo de la sección de contacto - cerrar automáticamente
+          whatsappChatBox.classList.remove('active');
+          manuallyClosedInContact = false; // Reset cuando sale de la sección
+        }
+      });
+    }, {
+      threshold: 0.2, // Se activa cuando el 20% de la sección es visible
+      rootMargin: '-50px'
+    });
+
+    contactObserver.observe(contactSection);
   }
+
+  // Abrir/cerrar el chat manualmente
+  if (whatsappToggle) {
+    whatsappToggle.addEventListener('click', () => {
+      whatsappChatBox.classList.toggle('active');
+    });
+  }
+
+  // Cerrar el chat manualmente
+  if (closeChat) {
+    closeChat.addEventListener('click', () => {
+      whatsappChatBox.classList.remove('active');
+      // Marcar que se cerró manualmente en la sección de contacto
+      if (contactSection) {
+        const rect = contactSection.getBoundingClientRect();
+        const isInContact = rect.top < window.innerHeight && rect.bottom > 0;
+        if (isInContact) {
+          manuallyClosedInContact = true;
+        }
+      }
+    });
+  }
+
+  // Enviar mensaje por WhatsApp
+  if (sendWhatsappBtn) {
+    sendWhatsappBtn.addEventListener('click', () => {
+      const message = whatsappMessage.value.trim();
+      const defaultMessage = 'Hola! Quiero consultar sobre sus servicios';
+      const finalMessage = message || defaultMessage;
+      
+      const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(finalMessage)}`;
+      window.open(whatsappUrl, '_blank');
+      
+      // Limpiar el textarea después de enviar
+      whatsappMessage.value = '';
+      whatsappChatBox.classList.remove('active');
+    });
+  }
+
+  // Permitir envío con Enter (opcional)
+  if (whatsappMessage) {
+    whatsappMessage.addEventListener('keypress', (e) => {
+      if (e.key === 'Enter' && !e.shiftKey) {
+        e.preventDefault();
+        sendWhatsappBtn.click();
+      }
+    });
+  }
+
+  // Cerrar el chat al hacer clic fuera de él (solo si no está en modo automático)
+  document.addEventListener('click', (e) => {
+    const whatsappWidget = document.getElementById('whatsappWidget');
+    if (whatsappWidget && !whatsappWidget.contains(e.target)) {
+      const isContactVisible = contactSection && 
+        contactSection.getBoundingClientRect().top < window.innerHeight && 
+        contactSection.getBoundingClientRect().bottom > 0;
+      
+      if (!isContactVisible) {
+        whatsappChatBox.classList.remove('active');
+      }
+    }
+  });
 });
 
 // Menu responsive
