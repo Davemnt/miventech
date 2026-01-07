@@ -7,12 +7,15 @@
 // Función simple para cargar variables de entorno
 function loadEnv($path) {
     if (!file_exists($path)) {
-        throw new Exception('Archivo .env no encontrado');
+        throw new Exception('Archivo .env no encontrado en: ' . $path);
     }
     
     $lines = file($path, FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES);
     foreach ($lines as $line) {
-        if (strpos(trim($line), '#') === 0) {
+        $line = trim($line);
+        
+        // Saltar comentarios y líneas vacías
+        if (empty($line) || strpos($line, '#') === 0) {
             continue;
         }
         
@@ -21,16 +24,21 @@ function loadEnv($path) {
             $name = trim($name);
             $value = trim($value);
             
-            if (!array_key_exists($name, $_ENV)) {
-                $_ENV[$name] = $value;
-                putenv("$name=$value");
-            }
+            // Guardar en $_ENV y putenv
+            $_ENV[$name] = $value;
+            putenv("$name=$value");
         }
     }
 }
 
 // Cargar variables de entorno
-loadEnv(__DIR__ . '/../.env');
+try {
+    $envPath = __DIR__ . '/../.env';
+    loadEnv($envPath);
+} catch (Exception $e) {
+    error_log('Error cargando .env: ' . $e->getMessage());
+    throw $e;
+}
 
 return [
     // ========================================

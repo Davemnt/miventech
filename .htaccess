@@ -20,7 +20,21 @@
 
 # ===== PROTECCIÓN DE ARCHIVOS SENSIBLES =====
 # Bloquear acceso a archivos que contienen información sensible
-<FilesMatch "\.(json|log|bak|inc|sh)$">
+
+# Proteger archivo .env (CREDENCIALES)
+<Files ".env">
+    Order Allow,Deny
+    Deny from all
+</Files>
+
+# Proteger archivos de configuración PHP
+<FilesMatch "^(smtp_config|config)\.php$">
+    Order Allow,Deny
+    Deny from all
+</FilesMatch>
+
+# Proteger archivos de respaldo y logs
+<FilesMatch "\.(json|log|bak|inc|sh|md|example)$">
     Order Allow,Deny
     Deny from all
 </FilesMatch>
@@ -107,6 +121,30 @@ ServerSignature Off
     Order Allow,Deny
     Deny from all
 </Files>
+
+# Proteger archivos de configuración adicionales
+<Files "test-config.php">
+    Order Allow,Deny
+    Deny from all
+</Files>
+
+# Headers de seguridad adicionales
+<IfModule mod_headers.c>
+    # Prevenir clickjacking
+    Header always set X-Frame-Options "SAMEORIGIN"
+    
+    # Prevenir MIME sniffing
+    Header always set X-Content-Type-Options "nosniff"
+    
+    # XSS Protection
+    Header always set X-XSS-Protection "1; mode=block"
+    
+    # Referrer Policy
+    Header always set Referrer-Policy "strict-origin-when-cross-origin"
+    
+    # Content Security Policy (ajustar según necesidad)
+    Header always set Content-Security-Policy "default-src 'self' https: 'unsafe-inline' 'unsafe-eval'"
+</IfModule>
 
 # ===== PÁGINAS DE ERROR PERSONALIZADAS =====
 # Redirigir errores 404 a la página principal (para SPA)

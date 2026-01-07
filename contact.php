@@ -1,4 +1,10 @@
 <?php
+// Configuración de errores para depuración (comentar en producción)
+error_reporting(E_ALL);
+ini_set('display_errors', 0); // No mostrar en pantalla
+ini_set('log_errors', 1);
+ini_set('error_log', __DIR__ . '/data/php_errors.log');
+
 // Cargar PHPMailer
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
@@ -99,7 +105,50 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // ============================================ 
     // CARGAR CONFIGURACIÓN SMTP
     // ============================================ 
-    $smtp_config = require 'config/smtp_config.php';
+    try {
+        $smtp_config = require 'config/smtp_config.php';
+        
+        // Verificar que las credenciales se cargaron correctamente
+        if (empty($smtp_config['smtp_host']) || empty($smtp_config['smtp_username']) || empty($smtp_config['smtp_password'])) {
+            throw new Exception('Configuración SMTP incompleta');
+        }
+        
+    } catch (Exception $e) {
+        error_log('Error en configuración SMTP: ' . $e->getMessage());
+        
+        // Guardar el contacto de todos modos
+        $contact_entry = [
+            'id' => uniqid('contact_', true),
+            'timestamp' => date('Y-m-d H:i:s'),
+            'date_readable' => date('d/m/Y'),
+            'time_readable' => date('H:i:s'),
+            'ip' => $ip,
+            'name' => $name,
+            'email' => $email,
+            'message' => $message,
+            'user_agent' => $_SERVER['HTTP_USER_AGENT'] ?? 'Unknown',
+            'status' => 'nuevo'
+        ];
+        
+        $contacts_file = 'data/contacts.json';
+        $contacts = [];
+        
+        if (file_exists($contacts_file)) {
+            $contacts = json_decode(file_get_contents($contacts_file), true) ?: [];
+        }
+        
+        $contacts[] = $contact_entry;
+        file_put_contents($contacts_file, json_encode($contacts, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE));
+        
+        // Responder con éxito (el mensaje se guardó)
+        echo json_encode([
+            'success' => true,
+            'message' => '¡Gracias por tu mensaje! Lo hemos recibido y te contactaremos pronto.',
+            'email_sent' => false
+        ]);
+        exit;
+    }
+    
     $subject = 'Nuevo mensaje de contacto - MIVENTECH';
     
     // Guardar en archivo JSON SIEMPRE (respaldo principal)
