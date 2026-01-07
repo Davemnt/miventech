@@ -91,7 +91,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // ============================================ 
     // CONFIGURACIÓN DE EMAIL (CAMBIAR ESTE EMAIL)
     // ============================================ 
-    $to = 'monte.david@outlook.com'; // CAMBIAR POR TU EMAIL REAL
+    $to = 'soporte@miventech.com'; // CAMBIAR POR TU EMAIL REAL
     $subject = 'Nuevo mensaje de contacto - MIVENTECH';
     
     // Guardar en archivo JSON SIEMPRE (respaldo principal)
