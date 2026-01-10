@@ -12,7 +12,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     
     <!-- TITULO PRINCIPAL - Aparece en la pestaña del navegador y en resultados de Google -->
-    <title>miventech - Servicio Técnico y Desarrollo Web | Reparación de PC y Sitios Web</title>
+    <title>miventech - Servicio Técnico</title>
     
     <!-- META DESCRIPTION - Descripción que aparece en Google bajo el título -->
     <meta name="description" content="MIVENTECH ofrece servicio técnico de computadoras, reparación de PC, mantenimiento preventivo y desarrollo web en Argentina. Soluciones tecnológicas confiables para tu negocio." />
@@ -79,7 +79,9 @@
         <!-- Navegación principal con flexbox para distribuir elementos -->
         
         <!-- LOGO - Imagen del logotipo de la empresa -->
-        <img src="/assets/images/logo1.png" alt="MivenTech Logo" style="max-height: 85px; width: auto;" />
+        <a href="/" aria-label="Ir al inicio">
+          <img src="/assets/images/logo1.png" alt="MivenTech Logo" style="max-height: 85px; width: auto;" />
+        </a>
         
         <!-- BOTÓN HAMBURGUESA - Solo visible en móviles (md:hidden) -->
         <button class="md:hidden text-white focus:outline-none" id="navbar-toggle">
@@ -376,59 +378,79 @@
             Creamos sitios web modernos que se ven bien en cualquier dispositivo y te ayudan a crecer
           </p>
           
-          <div class="grid md:grid-cols-2 gap-12 items-start max-w-6xl mx-auto">
-            <div class="space-y-6">
-              <div class="feature-card fade-in-left delay-100">
-                <div class="flex items-start gap-4">
-                  <div class="service-icon" style="width: 60px; height: 60px; min-width: 60px;">
-                    <i class="fas fa-mobile-alt text-2xl text-white"></i>
-                  </div>
-                  <div>
-                    <h3 class="text-2xl font-bold mb-3" style="color: #f4f4f4;">Diseño Responsive</h3>
-                    <p style="color: #878787;">
-                      Tu página web se verá perfecta en celulares, tablets y computadoras. Usamos tecnologías modernas como HTML5, CSS3, JavaScript y React para crear sitios que cargan rápido y se ven increíbles.
-                    </p>
-                  </div>
+          <!-- Grid de servicios web - 2x2 -->
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto mb-12">
+            <div class="feature-card fade-in-left delay-100">
+              <div class="flex items-start gap-4">
+                <div class="service-icon" style="width: 60px; height: 60px; min-width: 60px;">
+                  <i class="fab fa-wordpress text-2xl text-white"></i>
                 </div>
-              </div>
-
-              <div class="feature-card fade-in-left delay-300">
-                <div class="flex items-start gap-4">
-                  <div class="service-icon" style="width: 60px; height: 60px; min-width: 60px;">
-                    <i class="fas fa-globe text-2xl text-white"></i>
-                  </div>
-                  <div>
-                    <h3 class="text-2xl font-bold mb-3" style="color: #f4f4f4;">Sitios Web Personalizados</h3>
-                    <p style="color: #878787;">
-                      Creamos tu página desde cero, pensada para tu negocio. Landing pages, sitios de presentación, portfolios y más. Todo optimizado para aparecer en Google y convertir visitas en clientes.
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-              <div class="feature-card fade-in-left delay-500">
-                <div class="flex items-start gap-4">
-                  <div class="service-icon" style="width: 60px; height: 60px; min-width: 60px;">
-                    <i class="fas fa-rocket text-2xl text-white"></i>
-                  </div>
-                  <div>
-                    <h3 class="text-2xl font-bold mb-3" style="color: #f4f4f4;">Mejoramos tu Web Actual</h3>
-                    <p style="color: #878787;">
-                      ¿Ya tenés un sitio pero anda lento o no se ve bien? Lo revisamos y optimizamos para que funcione mejor, cargue más rápido y aparezca en las búsquedas de Google.
-                    </p>
-                  </div>
+                <div>
+                  <h3 class="text-2xl font-bold mb-3" style="color: #f4f4f4;">Desarrollo y Soporte WordPress</h3>
+                  <p style="color: #878787;">
+                    Diseñamos y mantenemos sitios en WordPress: temas a medida, configuración de plugins, migraciones y optimización de rendimiento.
+                  </p>
+                  <ul class="mt-3 text-sm" style="color: #bfbfbf;">
+                    <li>• Temas personalizados y maquetado responsive</li>
+                    <li>• Configuración de plugins y funcionalidades</li>
+                    <li>• Seguridad, backups y actualizaciones gestionadas</li>
+                    <li>• Migraciones desde otra plataforma</li>
+                  </ul>
                 </div>
               </div>
             </div>
 
-            <div class="flex items-start justify-center pt-8 fade-in-right">
-              <dotlottie-wc
-                src="https://lottie.host/d574364a-b84b-4710-9cca-de3e355da094/diWmRmTN3x.lottie"
-                style="width: 100%; max-width: 600px; height: 600px;"
-                autoplay
-                loop
-              ></dotlottie-wc>
+            <div class="feature-card fade-in-left delay-300">
+              <div class="flex items-start gap-4">
+                <div class="service-icon" style="width: 60px; height: 60px; min-width: 60px;">
+                  <i class="fas fa-mobile-alt text-2xl text-white"></i>
+                </div>
+                <div>
+                  <h3 class="text-2xl font-bold mb-3" style="color: #f4f4f4;">Diseño Responsive</h3>
+                  <p style="color: #878787;">
+                    Tu página web se verá perfecta en celulares, tablets y computadoras. Usamos tecnologías modernas como HTML5, CSS3, JavaScript y React para crear sitios que cargan rápido y se ven increíbles.
+                  </p>
+                </div>
+              </div>
             </div>
+
+            <div class="feature-card fade-in-left delay-500">
+              <div class="flex items-start gap-4">
+                <div class="service-icon" style="width: 60px; height: 60px; min-width: 60px;">
+                  <i class="fas fa-globe text-2xl text-white"></i>
+                </div>
+                <div>
+                  <h3 class="text-2xl font-bold mb-3" style="color: #f4f4f4;">Sitios Web Personalizados</h3>
+                  <p style="color: #878787;">
+                    Creamos tu página desde cero, pensada para tu negocio. Landing pages, sitios de presentación, portfolios y más. Todo optimizado para aparecer en Google y convertir visitas en clientes.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="feature-card fade-in-left delay-700">
+              <div class="flex items-start gap-4">
+                <div class="service-icon" style="width: 60px; height: 60px; min-width: 60px;">
+                  <i class="fas fa-rocket text-2xl text-white"></i>
+                </div>
+                <div>
+                  <h3 class="text-2xl font-bold mb-3" style="color: #f4f4f4;">Mejoramos tu Web Actual</h3>
+                  <p style="color: #878787;">
+                    ¿Ya tenés un sitio pero anda lento o no se ve bien? Lo revisamos y optimizamos para que funcione mejor, cargue más rápido y aparezca en las búsquedas de Google.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Animación centrada debajo -->
+          <div class="flex items-center justify-center fade-in delay-900">
+            <dotlottie-wc
+              src="https://lottie.host/d574364a-b84b-4710-9cca-de3e355da094/diWmRmTN3x.lottie"
+              style="width: 100%; max-width: 500px; height: 400px;"
+              autoplay
+              loop
+            ></dotlottie-wc>
           </div>
 
           <div class="bg-gradient-to-r from-orange-500 to-orange-600 rounded-2xl p-8 md:p-12 text-white text-center mt-16 max-w-4xl mx-auto fade-in delay-400">
