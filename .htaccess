@@ -48,10 +48,7 @@
 
 # ===== PROTEGER DIRECTORIO DATA =====
 # Bloquear acceso directo al directorio de datos
-<Directory "data">
-    Order Deny,Allow
-    Deny from all
-</Directory>
+# (El directorio data/ tiene su propio .htaccess con "Deny from all")
 
 # ===== HABILITAR PHP =====
 # Permitir ejecución de archivos PHP (para contact.php)
