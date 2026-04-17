@@ -71,20 +71,20 @@
     <!-- CUERPO PRINCIPAL - Todo el contenido visible de la página -->
     
     <!-- HEADER/NAVEGACIÓN - Menú principal fijo en la parte superior -->
-    <header class="fixed top-0 left-0 w-full py-4 navbar-solid z-50">
+    <header class="fixed top-0 left-0 w-full py-3 md:py-4 navbar-solid z-50 overflow-hidden">
       <!-- Header fijo (fixed) que se mantiene visible al hacer scroll -->
       <!-- z-50 = z-index alto para que esté sobre otros elementos -->
       
-      <nav class="container mx-auto flex items-center justify-between px-6">
+      <nav class="container mx-auto flex items-center justify-between px-4 sm:px-6 relative">
         <!-- Navegación principal con flexbox para distribuir elementos -->
         
         <!-- LOGO - Imagen del logotipo de la empresa -->
-        <a href="/" aria-label="Ir al inicio">
-          <img src="/assets/images/logo1.png" alt="MivenTech Logo" style="max-height: 85px; width: auto;" />
+        <a href="/" aria-label="Ir al inicio" class="flex-shrink-0">
+          <img src="/assets/images/logo1.png" alt="MivenTech Logo" class="h-12 sm:h-16 md:h-20 w-auto" />
         </a>
         
         <!-- BOTÓN HAMBURGUESA - Solo visible en móviles (md:hidden) -->
-        <button class="md:hidden text-white focus:outline-none" id="navbar-toggle">
+        <button class="md:hidden text-white focus:outline-none flex-shrink-0" id="navbar-toggle">
           <!-- Icono de menú hamburguesa para dispositivos móviles -->
           <i class="fas fa-bars text-2xl"></i>
         </button>
