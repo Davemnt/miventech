@@ -95,6 +95,7 @@
           <a href="#home" class="nav-link text-white text-base font-medium">Home</a>
           <a href="#about" class="nav-link text-white text-base font-medium">Sobre Nosotros</a>
           <a href="#services" class="nav-link text-white text-base font-medium">Servicios</a>
+          <a href="#ofertas" class="nav-link text-white text-base font-medium">Ofertas</a>
           <a href="#webdev" class="nav-link text-white text-base font-medium">Desarrollo Web</a>
           <!-- Botón de contacto con estilo especial (CTA - Call to Action) -->
           <a href="#contact" class="btn-primary">Contacto</a>
@@ -368,6 +369,160 @@
           </div>
         </div>
       </section>
+
+      <!-- SECCIÓN REVIVÍ TU PC - Banner promocional -->
+      <section id="revivi-pc" class="section-padding relative overflow-hidden" style="background: linear-gradient(135deg, #1a1919 0%, #151414 50%, #1c1616 100%);">
+        <!-- Efecto decorativo de fondo -->
+        <div style="position: absolute; top: -100px; right: -100px; width: 400px; height: 400px; background: radial-gradient(circle, rgba(255, 107, 53, 0.15) 0%, transparent 70%); pointer-events: none;"></div>
+        <div style="position: absolute; bottom: -80px; left: -80px; width: 300px; height: 300px; background: radial-gradient(circle, rgba(255, 140, 66, 0.1) 0%, transparent 70%); pointer-events: none;"></div>
+
+        <div class="container mx-auto px-6 relative z-10">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16 items-center max-w-6xl mx-auto">
+            
+            <!-- Imagen PC vieja -->
+            <div class="flex justify-center fade-in-left">
+              <div class="revivi-pc-img-wrapper relative">
+                <img src="assets/images/pcvieja.png" alt="Computadora vieja que puede ser revivida" class="revivi-pc-img rounded-2xl" style="max-width: 100%; height: auto;" />
+                <!-- Badge sobre la imagen -->
+                <div class="absolute -top-4 -right-4 md:-top-5 md:-right-5 bg-gradient-to-r from-orange-500 to-orange-600 text-white rounded-full w-20 h-20 md:w-24 md:h-24 flex items-center justify-center shadow-lg revivi-badge">
+                  <div class="text-center leading-tight">
+                    <i class="fas fa-sync-alt text-lg md:text-xl"></i>
+                    <p class="text-xs font-bold mt-1">Nueva vida</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Texto y CTA -->
+            <div class="fade-in-right space-y-6 text-center md:text-left">
+              <div class="inline-flex items-center px-4 py-2 rounded-full border" style="background: rgba(255, 107, 53, 0.1); border-color: rgba(255, 107, 53, 0.3);">
+                <i class="fas fa-desktop text-sm mr-2" style="color: #ff6b35;"></i>
+                <span class="text-sm font-semibold" style="color: #ff6b35;">No la tires, ¡mejorala!</span>
+              </div>
+
+              <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight" style="color: #f4f4f4;">
+                ¿Tenés una computadora <span class="gradient-text">vieja?</span>
+              </h2>
+
+              <p class="text-xl md:text-2xl font-semibold" style="color: #ff8c42;">
+                Reviví tu PC. Dale una segunda oportunidad.
+              </p>
+
+              <p class="text-base md:text-lg leading-relaxed" style="color: #b8b8b8;">
+                Con un upgrade de SSD, más memoria RAM y una optimización completa, tu computadora puede volver a funcionar como nueva. Ahorrá dinero y sacale el máximo provecho a lo que ya tenés.
+              </p>
+
+              <ul class="space-y-3 text-left">
+                <li class="flex items-center">
+                  <div class="flex-shrink-0 w-6 h-6 rounded-full bg-gradient-to-r from-orange-500 to-orange-600 flex items-center justify-center mr-3">
+                    <i class="fas fa-check text-white text-xs"></i>
+                  </div>
+                  <span style="color: #d4d4d4;">Upgrade de SSD y memoria RAM</span>
+                </li>
+                <li class="flex items-center">
+                  <div class="flex-shrink-0 w-6 h-6 rounded-full bg-gradient-to-r from-orange-500 to-orange-600 flex items-center justify-center mr-3">
+                    <i class="fas fa-check text-white text-xs"></i>
+                  </div>
+                  <span style="color: #d4d4d4;">Limpieza profunda y cambio de pasta térmica</span>
+                </li>
+                <li class="flex items-center">
+                  <div class="flex-shrink-0 w-6 h-6 rounded-full bg-gradient-to-r from-orange-500 to-orange-600 flex items-center justify-center mr-3">
+                    <i class="fas fa-check text-white text-xs"></i>
+                  </div>
+                  <span style="color: #d4d4d4;">Windows limpio y optimizado al máximo</span>
+                </li>
+              </ul>
+
+              <div class="pt-4">
+                <a href="#contact" class="btn-primary text-base sm:text-lg px-8 sm:px-10 py-4 sm:py-5">
+                  <i class="fas fa-wrench mr-2"></i>
+                  <span>Consultá sin compromiso</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECCIÓN OFERTAS - Galería de productos -->
+      <section id="ofertas" class="section-padding relative" style="background: linear-gradient(180deg, #f8f9fa 0%, #ffffff 100%);">
+        <div class="container mx-auto px-6">
+          <!-- Título -->
+          <div class="text-center mb-6 fade-in">
+            <div class="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-orange-50 to-orange-100 border border-orange-200 mb-6">
+              <i class="fas fa-tags text-sm mr-2" style="color: #ff6b35;"></i>
+              <span class="text-sm font-semibold" style="color: #ff6b35;">Equipos disponibles</span>
+            </div>
+            <h2 class="text-4xl md:text-5xl font-bold mb-4" style="color: #151414;">
+              Nuestras <span class="gradient-text">Ofertas</span>
+            </h2>
+            <p class="text-xl max-w-2xl mx-auto" style="color: #606060;">
+              Equipos revisados, optimizados y listos para usar. Hacé clic en cualquier oferta para verla en detalle.
+            </p>
+          </div>
+
+          <!-- Galería de ofertas -->
+          <div class="ofertas-grid max-w-6xl mx-auto">
+            <div class="oferta-item scale-in delay-100" onclick="openOfertaModal('assets/images/1.png', 'Notebook Dell Latitude 7490')">
+              <div class="oferta-img-wrapper">
+                <img src="assets/images/1.png" alt="Oferta - Notebook Dell Latitude 7490" loading="lazy" />
+                <div class="oferta-overlay">
+                  <i class="fas fa-search-plus text-3xl text-white"></i>
+                </div>
+              </div>
+            </div>
+            <div class="oferta-item scale-in delay-200" onclick="openOfertaModal('assets/images/2.png', 'Notebook Lenovo ThinkPad T430')">
+              <div class="oferta-img-wrapper">
+                <img src="assets/images/2.png" alt="Oferta - Notebook Lenovo ThinkPad T430" loading="lazy" />
+                <div class="oferta-overlay">
+                  <i class="fas fa-search-plus text-3xl text-white"></i>
+                </div>
+              </div>
+            </div>
+            <div class="oferta-item scale-in delay-300" onclick="openOfertaModal('assets/images/3.png', 'Notebook Lenovo ThinkPad L430')">
+              <div class="oferta-img-wrapper">
+                <img src="assets/images/3.png" alt="Oferta - Notebook Lenovo ThinkPad L430" loading="lazy" />
+                <div class="oferta-overlay">
+                  <i class="fas fa-search-plus text-3xl text-white"></i>
+                </div>
+              </div>
+            </div>
+            <div class="oferta-item scale-in delay-400" onclick="openOfertaModal('assets/images/4.png', 'Notebook HP ProBook 640 G1')">
+              <div class="oferta-img-wrapper">
+                <img src="assets/images/4.png" alt="Oferta - Notebook HP ProBook 640 G1" loading="lazy" />
+                <div class="oferta-overlay">
+                  <i class="fas fa-search-plus text-3xl text-white"></i>
+                </div>
+              </div>
+            </div>
+            <div class="oferta-item scale-in delay-500" onclick="openOfertaModal('assets/images/5.png', 'Computadora HP Prodesk 400 G3')">
+              <div class="oferta-img-wrapper">
+                <img src="assets/images/5.png" alt="Oferta - Computadora HP Prodesk 400 G3" loading="lazy" />
+                <div class="oferta-overlay">
+                  <i class="fas fa-search-plus text-3xl text-white"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- CTA ofertas -->
+          <div class="text-center mt-12 fade-in delay-400">
+            <p class="text-lg mb-6" style="color: #606060;">¿Te interesa algún equipo? Consultanos precio y disponibilidad</p>
+            <a href="#contact" class="btn-primary text-lg px-10 py-5">
+              <i class="fab fa-whatsapp mr-2"></i>
+              <span>Consultar disponibilidad</span>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Modal para ver ofertas en grande -->
+      <div id="ofertaModal" class="oferta-modal" onclick="closeOfertaModal(event)">
+        <button class="oferta-modal-close" onclick="closeOfertaModal(event)" aria-label="Cerrar">
+          <i class="fas fa-times text-2xl"></i>
+        </button>
+        <img id="ofertaModalImg" src="" alt="" class="oferta-modal-img" />
+      </div>
 
       <section id="webdev" class="section-padding" style="background-color: #151414;">
         <div class="container mx-auto px-6">
@@ -650,6 +805,7 @@
               <li><a href="#home" class="hover:text-orange-500 transition-colors" style="color: #878787;">Home</a></li>
               <li><a href="#about" class="hover:text-orange-500 transition-colors" style="color: #878787;">Sobre Nosotros</a></li>
               <li><a href="#services" class="hover:text-orange-500 transition-colors" style="color: #878787;">Servicios</a></li>
+              <li><a href="#ofertas" class="hover:text-orange-500 transition-colors" style="color: #878787;">Ofertas</a></li>
               <li><a href="#webdev" class="hover:text-orange-500 transition-colors" style="color: #878787;">Desarrollo Web</a></li>
             </ul>
           </div>

@@ -218,3 +218,34 @@ document.getElementById('contactForm').addEventListener('submit', async (e) => {
     submitBtn.textContent = 'Enviar Mensaje';
   }
 });
+
+// Modal de ofertas
+function openOfertaModal(src, alt) {
+  const modal = document.getElementById('ofertaModal');
+  const img = document.getElementById('ofertaModalImg');
+  img.src = src;
+  img.alt = alt;
+  modal.classList.add('active');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeOfertaModal(event) {
+  const modal = document.getElementById('ofertaModal');
+  const img = document.getElementById('ofertaModalImg');
+  // Cerrar solo si se hizo clic en el fondo o el botón de cerrar
+  if (event.target === modal || event.target.closest('.oferta-modal-close')) {
+    modal.classList.remove('active');
+    document.body.style.overflow = '';
+  }
+}
+
+// Cerrar modal con tecla Escape
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'Escape') {
+    const modal = document.getElementById('ofertaModal');
+    if (modal.classList.contains('active')) {
+      modal.classList.remove('active');
+      document.body.style.overflow = '';
+    }
+  }
+});
