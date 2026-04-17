@@ -145,14 +145,18 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     if (target) {
       target.scrollIntoView({ behavior: 'smooth', block: 'start' });
       
-      // Prevenir que la URL cambie (no agregar # en la URL)
-      if (history.pushState) {
-        history.pushState(null, null, ' ');
-      }
-      
       if (navbarLinks.classList.contains('mobile-menu-open')) {
         navbarLinks.classList.remove('mobile-menu-open');
         navbarLinks.classList.add('hidden');
+      }
+
+      // Prevenir que la URL cambie (usar un hash vacÃ­o seguro o try/catch)
+      try {
+        if (history.pushState) {
+          history.pushState(null, null, window.location.pathname);
+        }
+      } catch(e) {
+        console.error(e);
       }
     }
   });
