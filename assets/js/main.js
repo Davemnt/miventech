@@ -127,14 +127,7 @@ const navbarToggle = document.getElementById('navbar-toggle');
 const navbarLinks = document.getElementById('navbar-links');
 
 navbarToggle.addEventListener('click', () => {
-  const isOpen = navbarLinks.classList.contains('mobile-menu-open');
-  if (isOpen) {
-    navbarLinks.classList.remove('mobile-menu-open');
-    navbarLinks.classList.add('hidden');
-  } else {
-    navbarLinks.classList.remove('hidden');
-    navbarLinks.classList.add('mobile-menu-open');
-  }
+  navbarLinks.classList.toggle('mobile-menu-open');
 });
 
 // Smooth scroll
@@ -152,7 +145,6 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
       
       if (navbarLinks.classList.contains('mobile-menu-open')) {
         navbarLinks.classList.remove('mobile-menu-open');
-        navbarLinks.classList.add('hidden');
       }
     }
   });
