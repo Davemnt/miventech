@@ -235,130 +235,136 @@
       </section>
 
       <!-- SECCIÓN SERVICIOS - Qué ofrecemos a los clientes -->
-      <section id="services" class="section-padding relative" style="background: linear-gradient(180deg, #f8f9fa 0%, #ffffff 100%);">
-        <div class="container mx-auto px-6">
+      <section id="services" class="section-padding relative overflow-hidden" style="background: linear-gradient(180deg, #ffffff 0%, #f8f9fa 100%);">
+        <div class="container mx-auto px-6 relative z-10">
           <!-- TÍTULO DE SERVICIOS -->
           <div class="text-center mb-16 fade-in">
             <h2 class="text-4xl md:text-5xl font-bold mb-4" style="color: #151414;">
               ¿Qué <span class="gradient-text">Hacemos?</span>
             </h2>
+            <div class="w-24 h-1 mx-auto rounded-full mb-4" style="background: linear-gradient(90deg, #ff6b35, #ff8c42);"></div>
             <p class="text-xl max-w-2xl mx-auto" style="color: #606060;">
               Soluciones tecnológicas completas para mantener tu equipo funcionando perfectamente
             </p>
           </div>
-          
+
           <!-- GRID DE TARJETAS DE SERVICIOS -->
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-10 max-w-6xl mx-auto">
-            
-            <!-- TARJETA 1: REPARACIÓN Y MANTENIMIENTO -->
-            <div class="bg-white rounded-3xl p-10 service-card-enhanced scale-in delay-100 relative overflow-hidden group">
-              <!-- Efecto de brillo en hover -->
-              <div class="card-shine"></div>
-              
-              <!-- ICONO DEL SERVICIO -->
-              <div class="service-icon-enhanced mb-6">
-                <i class="fas fa-tools text-4xl text-white"></i>
+          <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 max-w-6xl mx-auto">
+
+            <!-- SERVICIO 1: DIAGNÓSTICO -->
+            <div class="rounded-2xl p-7 scale-in delay-100 relative overflow-hidden flex flex-col bg-white shadow-md" style="border: 1px solid rgba(255,107,53,0.15);">
+              <div class="absolute top-0 left-0 right-0 h-1 rounded-t-2xl" style="background: linear-gradient(90deg, #ff6b35, #ff8c42);"></div>
+              <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-4" style="background: linear-gradient(135deg, #ff6b35, #ff8c42); box-shadow: 0 6px 18px rgba(255,107,53,0.35);">
+                <i class="fas fa-stethoscope text-xl text-white"></i>
               </div>
-              
-              <!-- TÍTULO DEL SERVICIO -->
-              <h3 class="text-3xl font-bold mb-6" style="color: #151414;">Reparación y Mantenimiento</h3>
-              
-              <!-- LISTA DE CARACTERÍSTICAS -->
-              <ul class="space-y-4">
-                <li class="flex items-start group/item">
-                  <div class="flex-shrink-0 w-6 h-6 rounded-full bg-gradient-to-r from-orange-500 to-orange-600 flex items-center justify-center mr-4 mt-0.5">
-                    <i class="fas fa-check text-white text-xs"></i>
-                  </div>
-                  <span class="text-base" style="color: #606060;">Limpieza y mantenimiento preventivo completo</span>
-                </li>
-                <li class="flex items-start group/item">
-                  <div class="flex-shrink-0 w-6 h-6 rounded-full bg-gradient-to-r from-orange-500 to-orange-600 flex items-center justify-center mr-4 mt-0.5">
-                    <i class="fas fa-check text-white text-xs"></i>
-                  </div>
-                  <span class="text-base" style="color: #606060;">Reparación de computadoras de escritorio y portátiles</span>
-                </li>
-                <li class="flex items-start group/item">
-                  <div class="flex-shrink-0 w-6 h-6 rounded-full bg-gradient-to-r from-orange-500 to-orange-600 flex items-center justify-center mr-4 mt-0.5">
-                    <i class="fas fa-check text-white text-xs"></i>
-                  </div>
-                  <span class="text-base" style="color: #606060;">Reparación y calibración de monitores</span>
-                </li>
-                <li class="flex items-start group/item">
-                  <div class="flex-shrink-0 w-6 h-6 rounded-full bg-gradient-to-r from-orange-500 to-orange-600 flex items-center justify-center mr-4 mt-0.5">
-                    <i class="fas fa-check text-white text-xs"></i>
-                  </div>
-                  <span class="text-base" style="color: #606060;">Cambio y upgrade de componentes (RAM, SSD, etc.)</span>
-                </li>
-                <li class="flex items-start group/item">
-                  <div class="flex-shrink-0 w-6 h-6 rounded-full bg-gradient-to-r from-orange-500 to-orange-600 flex items-center justify-center mr-4 mt-0.5">
-                    <i class="fas fa-check text-white text-xs"></i>
-                  </div>
-                  <span class="text-base" style="color: #606060;">Diagnóstico profesional y presupuesto sin cargo</span>
-                </li>
-              </ul>
-              
-              <!-- Badge destacado -->
-              <div class="mt-6 inline-flex items-center px-4 py-2 rounded-full bg-orange-50 border border-orange-200">
-                <i class="fas fa-star text-orange-500 text-sm mr-2"></i>
-                <span class="text-sm font-semibold" style="color: #ff6b35;">Servicio más solicitado</span>
+              <h3 class="text-xl font-bold mb-2" style="color: #151414;">Diagnóstico / Revisión</h3>
+              <p class="text-sm mb-4 flex-1" style="color: #606060;">
+                Evaluación completa del estado del equipo: hardware, software, temperatura, disco y rendimiento general. Al finalizar recibís un informe detallado con el diagnóstico y un presupuesto de reparación.
+              </p>
+              <div class="flex flex-wrap gap-2 mt-auto">
+                <span class="text-xs font-medium px-3 py-1 rounded-full" style="background: rgba(255,107,53,0.15); color: #ff8c42;">PC</span>
+                <span class="text-xs font-medium px-3 py-1 rounded-full" style="background: rgba(255,107,53,0.15); color: #ff8c42;">Notebook</span>
+                <span class="text-xs font-medium px-3 py-1 rounded-full" style="background: rgba(255,107,53,0.15); color: #ff8c42;">AIO</span>
               </div>
             </div>
 
-            <!-- TARJETA 2: INSTALACIÓN Y CONFIGURACIÓN -->
-            <div class="bg-white rounded-3xl p-10 service-card-enhanced scale-in delay-300 relative overflow-hidden group">
-              <!-- Efecto de brillo en hover -->
-              <div class="card-shine"></div>
-              
-              <!-- ICONO DEL SERVICIO -->
-              <div class="service-icon-enhanced mb-6">
-                <i class="fas fa-cog text-4xl text-white"></i>
+            <!-- SERVICIO 2: FORMATEO SIN BACKUP -->
+            <div class="rounded-2xl p-7 scale-in delay-200 relative overflow-hidden flex flex-col bg-white shadow-md" style="border: 1px solid rgba(255,107,53,0.15);">
+              <div class="absolute top-0 left-0 right-0 h-1 rounded-t-2xl" style="background: linear-gradient(90deg, #ff6b35, #ff8c42);"></div>
+              <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-4" style="background: linear-gradient(135deg, #ff6b35, #ff8c42); box-shadow: 0 6px 18px rgba(255,107,53,0.35);">
+                <i class="fas fa-compact-disc text-xl text-white"></i>
               </div>
-              
-              <!-- TÍTULO DEL SERVICIO -->
-              <h3 class="text-3xl font-bold mb-6" style="color: #151414;">Instalación y Configuración</h3>
-              
-              <!-- LISTA DE CARACTERÍSTICAS -->
-              <ul class="space-y-4">
-                <li class="flex items-start group/item">
-                  <div class="flex-shrink-0 w-6 h-6 rounded-full bg-gradient-to-r from-orange-500 to-orange-600 flex items-center justify-center mr-4 mt-0.5">
-                    <i class="fas fa-check text-white text-xs"></i>
-                  </div>
-                  <span class="text-base" style="color: #606060;">Instalación de Windows y software especializado</span>
-                </li>
-                <li class="flex items-start group/item">
-                  <div class="flex-shrink-0 w-6 h-6 rounded-full bg-gradient-to-r from-orange-500 to-orange-600 flex items-center justify-center mr-4 mt-0.5">
-                    <i class="fas fa-check text-white text-xs"></i>
-                  </div>
-                  <span class="text-base" style="color: #606060;">Formateo completo y respaldo seguro de datos</span>
-                </li>
-                <li class="flex items-start group/item">
-                  <div class="flex-shrink-0 w-6 h-6 rounded-full bg-gradient-to-r from-orange-500 to-orange-600 flex items-center justify-center mr-4 mt-0.5">
-                    <i class="fas fa-check text-white text-xs"></i>
-                  </div>
-                  <span class="text-base" style="color: #606060;">Eliminación completa de virus y malware</span>
-                </li>
-                <li class="flex items-start group/item">
-                  <div class="flex-shrink-0 w-6 h-6 rounded-full bg-gradient-to-r from-orange-500 to-orange-600 flex items-center justify-center mr-4 mt-0.5">
-                    <i class="fas fa-check text-white text-xs"></i>
-                  </div>
-                  <span class="text-base" style="color: #606060;">Optimización avanzada de rendimiento del sistema</span>
-                </li>
-                <li class="flex items-start group/item">
-                  <div class="flex-shrink-0 w-6 h-6 rounded-full bg-gradient-to-r from-orange-500 to-orange-600 flex items-center justify-center mr-4 mt-0.5">
-                    <i class="fas fa-check text-white text-xs"></i>
-                  </div>
-                  <span class="text-base" style="color: #606060;">Asesoramiento técnico personalizado</span>
-                </li>
-              </ul>
-              
-              <!-- Badge destacado -->
-              <div class="mt-6 inline-flex items-center px-4 py-2 rounded-full bg-orange-50 border border-orange-200">
-                <i class="fas fa-shield-alt text-orange-500 text-sm mr-2"></i>
-                <span class="text-sm font-semibold" style="color: #ff6b35;">Garantía de servicio</span>
+              <h3 class="text-xl font-bold mb-2" style="color: #151414;">Formateo e Instalación de SO</h3>
+              <p class="text-sm mb-4 flex-1" style="color: #606060;">
+                Formateo completo del equipo e instalación limpia del sistema operativo (Windows). Incluye drivers, actualizaciones y configuración básica. <strong style="color: #ff8c42;">Sin respaldo de datos previo.</strong>
+              </p>
+              <div class="flex flex-wrap gap-2 mt-auto">
+                <span class="text-xs font-medium px-3 py-1 rounded-full" style="background: rgba(255,107,53,0.15); color: #ff8c42;">PC</span>
+                <span class="text-xs font-medium px-3 py-1 rounded-full" style="background: rgba(255,107,53,0.15); color: #ff8c42;">Notebook</span>
+                <span class="text-xs font-medium px-3 py-1 rounded-full" style="background: rgba(255,107,53,0.15); color: #ff8c42;">AIO</span>
+                <span class="text-xs font-medium px-3 py-1 rounded-full" style="background: rgba(255,107,53,0.15); color: #ff8c42;">Consolas</span>
               </div>
             </div>
+
+            <!-- SERVICIO 3: COMBO COMPLETO -->
+            <div class="rounded-2xl p-7 scale-in delay-300 relative overflow-hidden flex flex-col shadow-md" style="background: #fff8f5; border: 1px solid rgba(255,107,53,0.35);">
+              <div class="absolute top-0 left-0 right-0 h-1 rounded-t-2xl" style="background: linear-gradient(90deg, #ff6b35, #ff8c42);"></div>
+              <!-- Badge destacado -->
+              <div class="absolute top-4 right-4 text-xs font-bold px-2 py-1 rounded-full" style="background: #ff6b35; color: white;">⭐ Más completo</div>
+              <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-4" style="background: linear-gradient(135deg, #ff6b35, #ff8c42); box-shadow: 0 6px 18px rgba(255,107,53,0.4);">
+                <i class="fas fa-layer-group text-xl text-white"></i>
+              </div>
+              <h3 class="text-xl font-bold mb-2" style="color: #151414;">Servicio Integral Completo</h3>
+              <p class="text-sm mb-3 flex-1" style="color: #606060;">
+                El paquete más completo: limpieza profunda de hardware, formateo, instalación de SO + programas básicos, respaldo de datos (hasta 100gb) y cambio a SSD. Tu equipo queda como nuevo.
+              </p>
+              <ul class="text-xs space-y-1 mb-4" style="color: #444444;">
+                <li><i class="fas fa-check text-orange-400 mr-2"></i>Limpieza de hardware y pasta térmica</li>
+                <li><i class="fas fa-check text-orange-400 mr-2"></i>Formateo + SO + Programas Básicos</li>
+                <li><i class="fas fa-check text-orange-400 mr-2"></i>BackUp de datos hasta 100gb incluido</li>
+                <li><i class="fas fa-check text-orange-400 mr-2"></i>Cambio e instalación de SSD</li>
+              </ul>
+              <div class="flex flex-wrap gap-2 mt-auto">
+                <span class="text-xs font-medium px-3 py-1 rounded-full" style="background: rgba(255,107,53,0.2); color: #ff8c42;">PC</span>
+                <span class="text-xs font-medium px-3 py-1 rounded-full" style="background: rgba(255,107,53,0.2); color: #ff8c42;">Notebook</span>
+                <span class="text-xs font-medium px-3 py-1 rounded-full" style="background: rgba(255,107,53,0.2); color: #ff8c42;">AIO</span>
+              </div>
+            </div>
+
+            <!-- SERVICIO 4: BACKUP EXTRA -->
+            <div class="rounded-2xl p-7 scale-in delay-400 relative overflow-hidden flex flex-col bg-white shadow-md" style="border: 1px solid rgba(255,107,53,0.15);">
+              <div class="absolute top-0 left-0 right-0 h-1 rounded-t-2xl" style="background: linear-gradient(90deg, #ff6b35, #ff8c42);"></div>
+              <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-4" style="background: linear-gradient(135deg, #ff6b35, #ff8c42); box-shadow: 0 6px 18px rgba(255,107,53,0.35);">
+                <i class="fas fa-database text-xl text-white"></i>
+              </div>
+              <h3 class="text-xl font-bold mb-2" style="color: #151414;">BackUp de Datos Extras</h3>
+              <p class="text-sm mb-4 flex-1" style="color: #606060;">
+                Respaldo adicional de datos por cada 100gb que supere el incluido en el servicio. Tus archivos, fotos y documentos quedan guardados de forma segura antes de cualquier intervención.
+              </p>
+              <div class="flex flex-wrap gap-2 mt-auto">
+                <span class="text-xs font-medium px-3 py-1 rounded-full" style="background: rgba(255,107,53,0.15); color: #ff8c42;">PC</span>
+                <span class="text-xs font-medium px-3 py-1 rounded-full" style="background: rgba(255,107,53,0.15); color: #ff8c42;">Notebook</span>
+                <span class="text-xs font-medium px-3 py-1 rounded-full" style="background: rgba(255,107,53,0.15); color: #ff8c42;">AIO</span>
+              </div>
+            </div>
+
+            <!-- SERVICIO 5: INICIALIZACIÓN EQUIPO NUEVO -->
+            <div class="rounded-2xl p-7 scale-in delay-500 relative overflow-hidden flex flex-col bg-white shadow-md" style="border: 1px solid rgba(255,107,53,0.15);">
+              <div class="absolute top-0 left-0 right-0 h-1 rounded-t-2xl" style="background: linear-gradient(90deg, #ff6b35, #ff8c42);"></div>
+              <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-4" style="background: linear-gradient(135deg, #ff6b35, #ff8c42); box-shadow: 0 6px 18px rgba(255,107,53,0.35);">
+                <i class="fas fa-box-open text-xl text-white"></i>
+              </div>
+              <h3 class="text-xl font-bold mb-2" style="color: #151414;">Inicialización de Equipo Nuevo</h3>
+              <p class="text-sm mb-4 flex-1" style="color: #606060;">
+                Compraste un equipo nuevo y querés que esté listo para usar. Configuramos Windows, instalamos los programas básicos (navegador, office, antivirus, etc.) y lo dejamos optimizado desde el primer día.
+              </p>
+              <div class="flex flex-wrap gap-2 mt-auto">
+                <span class="text-xs font-medium px-3 py-1 rounded-full" style="background: rgba(255,107,53,0.15); color: #ff8c42;">PC</span>
+                <span class="text-xs font-medium px-3 py-1 rounded-full" style="background: rgba(255,107,53,0.15); color: #ff8c42;">Notebook</span>
+                <span class="text-xs font-medium px-3 py-1 rounded-full" style="background: rgba(255,107,53,0.15); color: #ff8c42;">AIO</span>
+              </div>
+            </div>
+
+            <!-- SERVICIO 6: LIMPIEZA + PASTA TÉRMICA -->
+            <div class="rounded-2xl p-7 scale-in delay-600 relative overflow-hidden flex flex-col bg-white shadow-md" style="border: 1px solid rgba(255,107,53,0.15);">
+              <div class="absolute top-0 left-0 right-0 h-1 rounded-t-2xl" style="background: linear-gradient(90deg, #ff6b35, #ff8c42);"></div>
+              <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-4" style="background: linear-gradient(135deg, #ff6b35, #ff8c42); box-shadow: 0 6px 18px rgba(255,107,53,0.35);">
+                <i class="fas fa-fan text-xl text-white"></i>
+              </div>
+              <h3 class="text-xl font-bold mb-2" style="color: #151414;">Limpieza de Hardware + Pasta Térmica</h3>
+              <p class="text-sm mb-4 flex-1" style="color: #606060;">
+                Desmontaje y limpieza interna profunda del equipo (polvo, suciedad acumulada) y reemplazo de la pasta térmica del procesador. Ideal para equipos que se recalientan, hacen ruido o andan lentos.
+              </p>
+              <div class="flex flex-wrap gap-2 mt-auto">
+                <span class="text-xs font-medium px-3 py-1 rounded-full" style="background: rgba(255,107,53,0.15); color: #ff8c42;">PC</span>
+                <span class="text-xs font-medium px-3 py-1 rounded-full" style="background: rgba(255,107,53,0.15); color: #ff8c42;">Notebook</span>
+                <span class="text-xs font-medium px-3 py-1 rounded-full" style="background: rgba(255,107,53,0.15); color: #ff8c42;">AIO</span>
+                <span class="text-xs font-medium px-3 py-1 rounded-full" style="background: rgba(255,107,53,0.15); color: #ff8c42;">Consolas</span>
+              </div>
+            </div>
+
           </div>
-          
+
           <!-- CTA al final de servicios -->
           <div class="text-center mt-16 fade-in delay-400">
             <p class="text-lg mb-6" style="color: #606060;">¿No encontrás lo que buscás?</p>
@@ -370,6 +376,7 @@
         </div>
       </section>
 
+      <!-- SECCIÓN PRECIOS - Tabla de precios de servicios -->
       <!-- SECCIÓN REVIVÍ TU PC - Banner promocional -->
       <section id="revivi-pc" class="section-padding relative overflow-hidden" style="background: linear-gradient(135deg, #1a1919 0%, #151414 50%, #1c1616 100%);">
         <!-- Efecto decorativo de fondo -->
@@ -691,7 +698,7 @@
               <div class="space-y-4">
                 <p class="text-lg flex items-start" style="color: #878787;">
                   <i class="fas fa-map-marker-alt text-orange-500 mr-3 mt-1"></i>
-                  <span>Ciudad Evita, Buenos Aires, Argentina. A 2 cuadras de la estación Querandi</span>
+                  <span>El Benteveo 1623, Ciudad Evita, Buenos Aires, Argentina</span>
                 </p>
                 <p class="text-lg flex items-start" style="color: #878787;">
                   <i class="fas fa-phone text-orange-500 mr-3 mt-1"></i>
@@ -711,7 +718,7 @@
             <!-- Mapa centrado cerca de la estación Querandi (sin dirección exacta) -->
             <div class="rounded-lg overflow-hidden shadow-lg">
               <iframe 
-                src="https://maps.google.com/maps?ll=-34.7196,-58.5280&z=15&output=embed" 
+                src="https://maps.google.com/maps?q=El+Benteveo+1623,+Ciudad+Evita,+Buenos+Aires&z=15&output=embed" 
                 width="100%" 
                 height="350" 
                 style="border:0;" 
