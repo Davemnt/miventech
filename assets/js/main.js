@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // Número de WhatsApp (configura tu número aquí)
   const country = '549'; // Código de país Argentina (SIN el +)
   const area = '11'; // Código de área
-  const number = '22230869'; // Tu número sin el 15
+  const number = '56296198'; // Tu número sin el 15
   const whatsappNumber = country + area + number;
 
   // Variable para controlar apertura manual vs automática
