@@ -1,844 +1,526 @@
 <!DOCTYPE html>
-<!-- Declaración de tipo de documento HTML5 - Define que usamos la versión más reciente de HTML -->
 <html lang="es">
-  <!-- Etiqueta html con idioma español para SEO y accesibilidad -->
-  <head>
-    <!-- Sección head: contiene metadatos, estilos y scripts que no se ven en la página -->
-    
-    <!-- Codificación de caracteres UTF-8 para soportar caracteres especiales -->
-    <meta charset="UTF-8" />
-    
-    <!-- Viewport para diseño responsive - hace que la página se vea bien en móviles -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    
-    <!-- TITULO PRINCIPAL - Aparece en la pestaña del navegador y en resultados de Google -->
-    <title>miventech - Servicio Técnico</title>
-    
-    <!-- META DESCRIPTION - Descripción que aparece en Google bajo el título -->
-    <meta name="description" content="MIVENTECH ofrece servicio técnico de computadoras, reparación de PC, mantenimiento preventivo y desarrollo web en Argentina. Soluciones tecnológicas confiables para tu negocio." />
-    
-    <!-- PALABRAS CLAVE para SEO -->
-    <meta name="keywords" content="servicio técnico, reparación computadoras, desarrollo web, mantenimiento PC, soporte técnico, diseño web responsive, Argentina" />
-    
-    <!-- METADATOS PARA REDES SOCIALES (Open Graph) -->
-    <meta property="og:title" content="MIVENTECH - Servicio Técnico y Desarrollo Web" />
-    <meta property="og:description" content="Tu tecnología en óptimas condiciones. Servicio técnico, reparación de PC y desarrollo web profesional." />
-    <meta property="og:image" content="https://miventech.com/assets/images/logo.png" />
-    <meta property="og:url" content="https://miventech.com" />
-    <meta property="og:type" content="website" />
-    <meta property="og:site_name" content="MIVENTECH" />
-    
-    <!-- METADATOS PARA TWITTER -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="MIVENTECH - Servicio Técnico y Desarrollo Web" />
-    <meta name="twitter:description" content="Tu tecnología en óptimas condiciones. Servicio técnico y desarrollo web profesional." />
-    <meta name="twitter:image" content="https://miventech.com/assets/images/logo.png" />
-    
-    <!-- INFORMACIÓN DEL SITIO -->
-    <meta name="author" content="MIVENTECH" />
-    <meta name="robots" content="index, follow" />
-    <meta name="revisit-after" content="7 days" />
-    <meta name="googlebot" content="index, follow" />
-    
-    <!-- VERIFICACIÓN GOOGLE SEARCH CONSOLE (agregar tu código) -->
-    <!-- <meta name="google-site-verification" content="TU_CODIGO_AQUI" /> -->
-    
-    <!-- FAVICON - Icono que aparece en la pestaña del navegador -->
-    <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico" />
-    
-    <!-- URL CANÓNICA - Evita contenido duplicado en Google -->
-    <link rel="canonical" href="https://miventech.com/" />
-    
-    <!-- SITEMAP REFERENCE - Para motores de búsqueda -->
-    <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml" />
-    
-    <!-- MANIFEST PWA - Convierte el sitio en Progressive Web App -->
-    <link rel="manifest" href="/manifest.json" />
-    
-    <!-- FRAMEWORK CSS TAILWIND - Para estilos rápidos y responsive -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    
-    <!-- ICONOS FONT AWESOME - Para iconos vectoriales -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet" />
-    
-    <!-- FUENTE GOOGLE FONTS - Tipografía Inter para mejor legibilidad -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
-    
-    <!-- ESTILOS PERSONALIZADOS - Nuestras reglas CSS específicas -->
-    <link rel="stylesheet" href="assets/css/style.css?v=1.1" />
-  </head>
-  <body>
-    <!-- CUERPO PRINCIPAL - Todo el contenido visible de la página -->
-    
-    <!-- HEADER/NAVEGACIÓN - Menú principal fijo en la parte superior -->
-    <header class="fixed top-0 left-0 w-full py-3 md:py-4 navbar-solid z-50">
-      <!-- Header fijo (fixed) que se mantiene visible al hacer scroll -->
-      <!-- z-50 = z-index alto para que esté sobre otros elementos -->
-      
-      <nav class="container mx-auto flex items-center justify-between px-4 sm:px-6 relative">
-        <!-- Navegación principal con flexbox para distribuir elementos -->
-        
-        <!-- LOGO - Imagen del logotipo de la empresa -->
-        <a href="/" aria-label="Ir al inicio" class="flex-shrink-0">
-          <img src="/assets/images/logo1.png" alt="MivenTech Logo" class="h-12 sm:h-16 md:h-20 w-auto" />
-        </a>
-        
-        <!-- BOTÓN HAMBURGUESA - Solo visible en móviles (md:hidden) -->
-        <button class="md:hidden text-white focus:outline-none flex-shrink-0 mr-6" id="navbar-toggle">
-          <!-- Icono de menú hamburguesa para dispositivos móviles -->
-          <i class="fas fa-bars text-2xl"></i>
-        </button>
-        
-        <!-- MENÚ DE NAVEGACIÓN - Oculto en móviles, visible en desktop (hidden md:flex) -->
-        <div class="hidden md:flex items-center space-x-8" id="navbar-links">
-          <!-- Enlaces de navegación interna usando anclas (#) -->
-          <a href="#home" class="nav-link text-white text-base font-medium">Home</a>
-          <a href="#about" class="nav-link text-white text-base font-medium">Sobre Nosotros</a>
-          <a href="#services" class="nav-link text-white text-base font-medium">Servicios</a>
-          <a href="#ofertas" class="nav-link text-white text-base font-medium">Ofertas</a>
-          <a href="#webdev" class="nav-link text-white text-base font-medium">Desarrollo Web</a>
-          <!-- Botón de contacto con estilo especial (CTA - Call to Action) -->
-          <a href="#contact" class="btn-primary">Contacto</a>
-        </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MIVENTECH · Servicio técnico de PC y desarrollo web en Ciudad Evita</title>
+  <meta name="description" content="Servicio técnico de computadoras, notebooks y consolas en Ciudad Evita, La Matanza. Diagnóstico con informe, limpieza y pasta térmica, formateo, cambio a SSD y desarrollo web." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://miventech.com/" />
+
+  <meta property="og:title" content="MIVENTECH · Servicio técnico y desarrollo web" />
+  <meta property="og:description" content="Diagnóstico honesto, reparación prolija. Servicio técnico de PC y desarrollo web en Ciudad Evita." />
+  <meta property="og:image" content="https://miventech.com/assets/images/logo.png" />
+  <meta property="og:url" content="https://miventech.com" />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <link rel="icon" type="image/x-icon" href="/assets/images/favicon.ico?v=2" />
+  <link rel="shortcut icon" href="/assets/images/favicon.ico?v=2" />
+  <link rel="manifest" href="/manifest.json" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Instrument+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/style.css?v=2.5" />
+
+  <!-- Datos estructurados para Google (negocio local) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ComputerStore",
+    "name": "MIVENTECH",
+    "url": "https://miventech.com",
+    "image": "https://miventech.com/assets/images/logo.png",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "El Benteveo 1623",
+      "addressLocality": "Ciudad Evita",
+      "addressRegion": "Buenos Aires",
+      "addressCountry": "AR"
+    },
+    "openingHoursSpecification": [{
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"]
+    }]
+  }
+  </script>
+</head>
+<body>
+
+  <!-- ============ HEADER ============ -->
+  <header class="site-header" id="top">
+    <div class="wrap header-inner">
+      <a href="#top" class="brand" aria-label="MIVENTECH, ir al inicio">
+        <img src="assets/images/logo1.png" alt="MIVENTECH" class="brand-logo" onerror="this.style.display='none';this.nextElementSibling.style.display='inline-flex'" />
+        <span class="brand-text" style="display:none"><span class="brand-dot"></span>miventech</span>
+      </a>
+
+      <nav class="nav" id="nav" aria-label="Principal">
+        <a href="#servicios">Servicios</a>
+        <a href="#proceso">Cómo trabajamos</a>
+        <a href="#revivi">Reviví tu PC</a>
+        <a href="#web">Desarrollo web</a>
+        <a href="#contacto" class="btn btn-sm btn-accent">Contacto</a>
       </nav>
-    </header>
 
-    <!-- CONTENIDO PRINCIPAL - Todas las secciones de la página -->
-    <main class="overflow-x-hidden" style="overflow-x: hidden;">
-      
-      <!-- SECCIÓN HOME/HERO - Primera impresión, lo más importante -->
-      <section id="home" class="min-h-screen flex items-center py-20 relative overflow-hidden" style="background: url('assets/images/fondo-home.png') center center / cover no-repeat, linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);">
-        <!-- Fondo con partículas animadas -->
-        <div class="hero-particles"></div>
-        
-        <div class="container mx-auto px-6 relative z-10">
-          <div class="max-w-5xl mx-auto">
-            
-            <!-- CONTENIDO PRINCIPAL CENTRADO -->
-            <div class="text-center space-y-8 fade-in">
-              
-              <!-- Badge superior -->
-              <div class="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-orange-50 to-orange-100 border border-orange-200">
-                <span class="w-2 h-2 bg-orange-500 rounded-full mr-2 animate-pulse"></span>
-                <span class="text-sm font-semibold" style="color: #ff6b35;">Servicio Técnico Profesional</span>
-              </div>
-              
-              <!-- TÍTULO PRINCIPAL H1 -->
-              <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black leading-tight" style="color: #151414; line-height: 1.1;">
-                Tu tecnología en
-                <span class="gradient-text block mt-2">ÓPTIMAS</span>
-                <span class="block mt-2">condiciones</span>
-              </h1>
-              
-              <!-- SUBTÍTULO -->
-              <p class="text-lg sm:text-xl md:text-2xl leading-relaxed font-medium max-w-3xl mx-auto" style="color: #606060; line-height: 1.7;">
-                Servicio técnico, mantenimiento y desarrollo web de confianza para tu negocio.
-              </p>
-              
-              <!-- BOTONES DE ACCIÓN -->
-              <div class="flex flex-col sm:flex-row flex-wrap gap-4 pt-6 justify-center">
-                <a href="#services" class="btn-primary text-base sm:text-lg px-8 sm:px-10 py-4 sm:py-5">
-                  <span>Ver Servicios</span>
-                  <i class="fas fa-arrow-right ml-2"></i>
-                </a>
-                <a href="#contact" class="btn-secondary text-base sm:text-lg px-8 sm:px-10 py-4 sm:py-5">
-                  <i class="fas fa-comments mr-2"></i>
-                  <span>Hablemos</span>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-        
-        <!-- Indicador de scroll -->
-        <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 scroll-indicator">
-          <a href="#about" class="flex flex-col items-center gap-2 text-gray-400 hover:text-orange-500 transition-colors">
-            <span class="text-sm font-medium">Explorar más</span>
-            <i class="fas fa-chevron-down text-xl animate-bounce"></i>
-          </a>
-        </div>
-      </section>
-
-      <!-- SECCIÓN SOBRE NOSOTROS - Información de la empresa -->
-      <section id="about" class="section-padding relative overflow-hidden" style="background: linear-gradient(180deg, #151414 0%, #1a1919 100%);">
-        <!-- Efectos decorativos de fondo -->
-        <div style="position: absolute; top: 0; right: 0; width: 500px; height: 500px; background: radial-gradient(circle, rgba(255, 107, 53, 0.1) 0%, transparent 70%); pointer-events: none;"></div>
-        <div style="position: absolute; bottom: 0; left: 0; width: 400px; height: 400px; background: radial-gradient(circle, rgba(255, 140, 66, 0.08) 0%, transparent 70%); pointer-events: none;"></div>
-        
-        <div class="container mx-auto px-6 relative z-10">
-          <!-- TÍTULO DE SECCIÓN H2 -->
-          <div class="text-center mb-16 fade-in">
-            <h2 class="text-4xl md:text-5xl font-bold mb-4" style="color: #f4f4f4;">
-              ¿Quiénes <span class="gradient-text">Somos?</span>
-            </h2>
-            <div class="w-24 h-1 mx-auto rounded-full" style="background: linear-gradient(90deg, #ff6b35, #ff8c42);"></div>
-          </div>
-          
-          <!-- CONTENIDO DE LA SECCIÓN -->
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 items-stretch max-w-6xl mx-auto">
-            <!-- TARJETA 1 - Historia y misión -->
-            <div class="fade-in-left delay-200">
-              <div class="h-full p-6 md:p-8 rounded-2xl" style="background: rgba(255, 107, 53, 0.05); border: 1px solid rgba(255, 107, 53, 0.1);">
-                <div class="flex justify-center mb-6">
-                  <div class="w-16 h-16 rounded-full bg-gradient-to-r from-orange-500 to-orange-600 flex items-center justify-center">
-                    <i class="fas fa-heart text-white text-2xl"></i>
-                  </div>
-                </div>
-                <h3 class="text-xl md:text-2xl font-bold mb-4 text-center" style="color: #f4f4f4;">Nuestra Pasión</h3>
-                <p class="text-base md:text-lg leading-relaxed text-center" style="color: #b8b8b8;">
-                  Somos un emprendimiento local nacido de la pasión por la tecnología y las ganas de ayudar. En MIVENTECH nos dedicamos a que tu computadora vuelva a funcionar como el primer día, sin complicaciones.
-                </p>
-              </div>
-            </div>
-            
-            <!-- TARJETA 2 - Servicios y valores -->
-            <div class="fade-in-right delay-300">
-              <div class="h-full p-6 md:p-8 rounded-2xl" style="background: rgba(255, 107, 53, 0.05); border: 1px solid rgba(255, 107, 53, 0.1);">
-                <div class="flex justify-center mb-6">
-                  <div class="w-16 h-16 rounded-full bg-gradient-to-r from-orange-500 to-orange-600 flex items-center justify-center">
-                    <i class="fas fa-handshake text-white text-2xl"></i>
-                  </div>
-                </div>
-                <h3 class="text-xl md:text-2xl font-bold mb-4 text-center" style="color: #f4f4f4;">Nuestro Compromiso</h3>
-                <p class="text-base md:text-lg leading-relaxed text-center" style="color: #b8b8b8;">
-                  Ofrecemos mantenimiento y reparación de equipos, además de desarrollo web para quienes quieren tener presencia online. Trabajamos con honestidad, buscando siempre la mejor solución para vos.
-                </p>
-              </div>
-            </div>
-          </div>
-          
-          <!-- Valores adicionales -->
-          <!-- <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16 max-w-5xl mx-auto">
-            <div class="text-center fade-in delay-300">
-              <div class="w-20 h-20 mx-auto mb-4 rounded-2xl bg-gradient-to-br from-orange-500 to-orange-600 flex items-center justify-center transform hover:rotate-6 transition-transform">
-                <i class="fas fa-shield-alt text-white text-3xl"></i>
-              </div>
-              <h4 class="text-xl font-bold mb-2" style="color: #f4f4f4;">Confianza</h4>
-              <p class="text-sm" style="color: #878787;">Transparencia en cada servicio</p>
-            </div>
-            <div class="text-center fade-in delay-400">
-              <div class="w-20 h-20 mx-auto mb-4 rounded-2xl bg-gradient-to-br from-orange-500 to-orange-600 flex items-center justify-center transform hover:rotate-6 transition-transform">
-                <i class="fas fa-bolt text-white text-3xl"></i>
-              </div>
-              <h4 class="text-xl font-bold mb-2" style="color: #f4f4f4;">Rapidez</h4>
-              <p class="text-sm" style="color: #878787;">Soluciones ágiles y efectivas</p>
-            </div>
-            <div class="text-center fade-in delay-500">
-              <div class="w-20 h-20 mx-auto mb-4 rounded-2xl bg-gradient-to-br from-orange-500 to-orange-600 flex items-center justify-center transform hover:rotate-6 transition-transform">
-                <i class="fas fa-medal text-white text-3xl"></i>
-              </div>
-              <h4 class="text-xl font-bold mb-2" style="color: #f4f4f4;">Calidad</h4>
-              <p class="text-sm" style="color: #878787;">Excelencia en cada detalle</p>
-            </div>
-          </div> -->
-        </div>
-      </section>
-
-      <!-- SECCIÓN SERVICIOS - Qué ofrecemos a los clientes -->
-      <section id="services" class="section-padding relative overflow-hidden" style="background: linear-gradient(180deg, #ffffff 0%, #f8f9fa 100%);">
-        <div class="container mx-auto px-6 relative z-10">
-          <!-- TÍTULO DE SERVICIOS -->
-          <div class="text-center mb-16 fade-in">
-            <h2 class="text-4xl md:text-5xl font-bold mb-4" style="color: #151414;">
-              ¿Qué <span class="gradient-text">Hacemos?</span>
-            </h2>
-            <div class="w-24 h-1 mx-auto rounded-full mb-4" style="background: linear-gradient(90deg, #ff6b35, #ff8c42);"></div>
-            <p class="text-xl max-w-2xl mx-auto" style="color: #606060;">
-              Soluciones tecnológicas completas para mantener tu equipo funcionando perfectamente
-            </p>
-          </div>
-
-          <!-- GRID DE TARJETAS DE SERVICIOS -->
-          <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 max-w-6xl mx-auto">
-
-            <!-- SERVICIO 1: DIAGNÓSTICO -->
-            <div class="rounded-2xl p-7 scale-in delay-100 relative overflow-hidden flex flex-col bg-white shadow-md" style="border: 1px solid rgba(255,107,53,0.15);">
-              <div class="absolute top-0 left-0 right-0 h-1 rounded-t-2xl" style="background: linear-gradient(90deg, #ff6b35, #ff8c42);"></div>
-              <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-4" style="background: linear-gradient(135deg, #ff6b35, #ff8c42); box-shadow: 0 6px 18px rgba(255,107,53,0.35);">
-                <i class="fas fa-stethoscope text-xl text-white"></i>
-              </div>
-              <h3 class="text-xl font-bold mb-2" style="color: #151414;">Diagnóstico / Revisión</h3>
-              <p class="text-sm mb-4 flex-1" style="color: #606060;">
-                Evaluación completa del estado del equipo: hardware, software, temperatura, disco y rendimiento general. Al finalizar recibís un informe detallado con el diagnóstico y un presupuesto de reparación.
-              </p>
-              <div class="flex flex-wrap gap-2 mt-auto">
-                <span class="text-xs font-medium px-3 py-1 rounded-full" style="background: rgba(255,107,53,0.15); color: #ff8c42;">PC</span>
-                <span class="text-xs font-medium px-3 py-1 rounded-full" style="background: rgba(255,107,53,0.15); color: #ff8c42;">Notebook</span>
-                <span class="text-xs font-medium px-3 py-1 rounded-full" style="background: rgba(255,107,53,0.15); color: #ff8c42;">AIO</span>
-              </div>
-            </div>
-
-            <!-- SERVICIO 2: FORMATEO SIN BACKUP -->
-            <div class="rounded-2xl p-7 scale-in delay-200 relative overflow-hidden flex flex-col bg-white shadow-md" style="border: 1px solid rgba(255,107,53,0.15);">
-              <div class="absolute top-0 left-0 right-0 h-1 rounded-t-2xl" style="background: linear-gradient(90deg, #ff6b35, #ff8c42);"></div>
-              <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-4" style="background: linear-gradient(135deg, #ff6b35, #ff8c42); box-shadow: 0 6px 18px rgba(255,107,53,0.35);">
-                <i class="fas fa-compact-disc text-xl text-white"></i>
-              </div>
-              <h3 class="text-xl font-bold mb-2" style="color: #151414;">Formateo e Instalación de SO</h3>
-              <p class="text-sm mb-4 flex-1" style="color: #606060;">
-                Formateo completo del equipo e instalación limpia del sistema operativo (Windows). Incluye drivers, actualizaciones y configuración básica. <strong style="color: #ff8c42;">Sin respaldo de datos previo.</strong>
-              </p>
-              <div class="flex flex-wrap gap-2 mt-auto">
-                <span class="text-xs font-medium px-3 py-1 rounded-full" style="background: rgba(255,107,53,0.15); color: #ff8c42;">PC</span>
-                <span class="text-xs font-medium px-3 py-1 rounded-full" style="background: rgba(255,107,53,0.15); color: #ff8c42;">Notebook</span>
-                <span class="text-xs font-medium px-3 py-1 rounded-full" style="background: rgba(255,107,53,0.15); color: #ff8c42;">AIO</span>
-                <span class="text-xs font-medium px-3 py-1 rounded-full" style="background: rgba(255,107,53,0.15); color: #ff8c42;">Consolas</span>
-              </div>
-            </div>
-
-            <!-- SERVICIO 3: COMBO COMPLETO -->
-            <div class="rounded-2xl p-7 scale-in delay-300 relative overflow-hidden flex flex-col shadow-md" style="background: #fff8f5; border: 1px solid rgba(255,107,53,0.35);">
-              <div class="absolute top-0 left-0 right-0 h-1 rounded-t-2xl" style="background: linear-gradient(90deg, #ff6b35, #ff8c42);"></div>
-              <!-- Badge destacado -->
-              <div class="absolute top-4 right-4 text-xs font-bold px-2 py-1 rounded-full" style="background: #ff6b35; color: white;">⭐ Más completo</div>
-              <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-4" style="background: linear-gradient(135deg, #ff6b35, #ff8c42); box-shadow: 0 6px 18px rgba(255,107,53,0.4);">
-                <i class="fas fa-layer-group text-xl text-white"></i>
-              </div>
-              <h3 class="text-xl font-bold mb-2" style="color: #151414;">Servicio Integral Completo</h3>
-              <p class="text-sm mb-3 flex-1" style="color: #606060;">
-                El paquete más completo: limpieza profunda de hardware, formateo, instalación de SO + programas básicos, respaldo de datos (hasta 100gb) y cambio a SSD. Tu equipo queda como nuevo.
-              </p>
-              <ul class="text-xs space-y-1 mb-4" style="color: #444444;">
-                <li><i class="fas fa-check text-orange-400 mr-2"></i>Limpieza de hardware y pasta térmica</li>
-                <li><i class="fas fa-check text-orange-400 mr-2"></i>Formateo + SO + Programas Básicos</li>
-                <li><i class="fas fa-check text-orange-400 mr-2"></i>BackUp de datos hasta 100gb incluido</li>
-                <li><i class="fas fa-check text-orange-400 mr-2"></i>Cambio e instalación de SSD</li>
-              </ul>
-              <div class="flex flex-wrap gap-2 mt-auto">
-                <span class="text-xs font-medium px-3 py-1 rounded-full" style="background: rgba(255,107,53,0.2); color: #ff8c42;">PC</span>
-                <span class="text-xs font-medium px-3 py-1 rounded-full" style="background: rgba(255,107,53,0.2); color: #ff8c42;">Notebook</span>
-                <span class="text-xs font-medium px-3 py-1 rounded-full" style="background: rgba(255,107,53,0.2); color: #ff8c42;">AIO</span>
-              </div>
-            </div>
-
-            <!-- SERVICIO 4: BACKUP EXTRA -->
-            <div class="rounded-2xl p-7 scale-in delay-400 relative overflow-hidden flex flex-col bg-white shadow-md" style="border: 1px solid rgba(255,107,53,0.15);">
-              <div class="absolute top-0 left-0 right-0 h-1 rounded-t-2xl" style="background: linear-gradient(90deg, #ff6b35, #ff8c42);"></div>
-              <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-4" style="background: linear-gradient(135deg, #ff6b35, #ff8c42); box-shadow: 0 6px 18px rgba(255,107,53,0.35);">
-                <i class="fas fa-database text-xl text-white"></i>
-              </div>
-              <h3 class="text-xl font-bold mb-2" style="color: #151414;">BackUp de Datos Extras</h3>
-              <p class="text-sm mb-4 flex-1" style="color: #606060;">
-                Respaldo adicional de datos por cada 100gb que supere el incluido en el servicio. Tus archivos, fotos y documentos quedan guardados de forma segura antes de cualquier intervención.
-              </p>
-              <div class="flex flex-wrap gap-2 mt-auto">
-                <span class="text-xs font-medium px-3 py-1 rounded-full" style="background: rgba(255,107,53,0.15); color: #ff8c42;">PC</span>
-                <span class="text-xs font-medium px-3 py-1 rounded-full" style="background: rgba(255,107,53,0.15); color: #ff8c42;">Notebook</span>
-                <span class="text-xs font-medium px-3 py-1 rounded-full" style="background: rgba(255,107,53,0.15); color: #ff8c42;">AIO</span>
-              </div>
-            </div>
-
-            <!-- SERVICIO 5: INICIALIZACIÓN EQUIPO NUEVO -->
-            <div class="rounded-2xl p-7 scale-in delay-500 relative overflow-hidden flex flex-col bg-white shadow-md" style="border: 1px solid rgba(255,107,53,0.15);">
-              <div class="absolute top-0 left-0 right-0 h-1 rounded-t-2xl" style="background: linear-gradient(90deg, #ff6b35, #ff8c42);"></div>
-              <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-4" style="background: linear-gradient(135deg, #ff6b35, #ff8c42); box-shadow: 0 6px 18px rgba(255,107,53,0.35);">
-                <i class="fas fa-box-open text-xl text-white"></i>
-              </div>
-              <h3 class="text-xl font-bold mb-2" style="color: #151414;">Inicialización de Equipo Nuevo</h3>
-              <p class="text-sm mb-4 flex-1" style="color: #606060;">
-                Compraste un equipo nuevo y querés que esté listo para usar. Configuramos Windows, instalamos los programas básicos (navegador, office, antivirus, etc.) y lo dejamos optimizado desde el primer día.
-              </p>
-              <div class="flex flex-wrap gap-2 mt-auto">
-                <span class="text-xs font-medium px-3 py-1 rounded-full" style="background: rgba(255,107,53,0.15); color: #ff8c42;">PC</span>
-                <span class="text-xs font-medium px-3 py-1 rounded-full" style="background: rgba(255,107,53,0.15); color: #ff8c42;">Notebook</span>
-                <span class="text-xs font-medium px-3 py-1 rounded-full" style="background: rgba(255,107,53,0.15); color: #ff8c42;">AIO</span>
-              </div>
-            </div>
-
-            <!-- SERVICIO 6: LIMPIEZA + PASTA TÉRMICA -->
-            <div class="rounded-2xl p-7 scale-in delay-600 relative overflow-hidden flex flex-col bg-white shadow-md" style="border: 1px solid rgba(255,107,53,0.15);">
-              <div class="absolute top-0 left-0 right-0 h-1 rounded-t-2xl" style="background: linear-gradient(90deg, #ff6b35, #ff8c42);"></div>
-              <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-4" style="background: linear-gradient(135deg, #ff6b35, #ff8c42); box-shadow: 0 6px 18px rgba(255,107,53,0.35);">
-                <i class="fas fa-fan text-xl text-white"></i>
-              </div>
-              <h3 class="text-xl font-bold mb-2" style="color: #151414;">Limpieza de Hardware + Pasta Térmica</h3>
-              <p class="text-sm mb-4 flex-1" style="color: #606060;">
-                Desmontaje y limpieza interna profunda del equipo (polvo, suciedad acumulada) y reemplazo de la pasta térmica del procesador. Ideal para equipos que se recalientan, hacen ruido o andan lentos.
-              </p>
-              <div class="flex flex-wrap gap-2 mt-auto">
-                <span class="text-xs font-medium px-3 py-1 rounded-full" style="background: rgba(255,107,53,0.15); color: #ff8c42;">PC</span>
-                <span class="text-xs font-medium px-3 py-1 rounded-full" style="background: rgba(255,107,53,0.15); color: #ff8c42;">Notebook</span>
-                <span class="text-xs font-medium px-3 py-1 rounded-full" style="background: rgba(255,107,53,0.15); color: #ff8c42;">AIO</span>
-                <span class="text-xs font-medium px-3 py-1 rounded-full" style="background: rgba(255,107,53,0.15); color: #ff8c42;">Consolas</span>
-              </div>
-            </div>
-
-          </div>
-
-          <!-- CTA al final de servicios -->
-          <div class="text-center mt-16 fade-in delay-400">
-            <p class="text-lg mb-6" style="color: #606060;">¿No encontrás lo que buscás?</p>
-            <a href="#contact" class="btn-primary text-lg px-10 py-5">
-              <i class="fas fa-phone-alt mr-2"></i>
-              <span>Consultanos tu caso</span>
-            </a>
-          </div>
-        </div>
-      </section>
-
-      <!-- SECCIÓN PRECIOS - Tabla de precios de servicios -->
-      <!-- SECCIÓN REVIVÍ TU PC - Banner promocional -->
-      <section id="revivi-pc" class="section-padding relative overflow-hidden" style="background: linear-gradient(135deg, #1a1919 0%, #151414 50%, #1c1616 100%);">
-        <!-- Efecto decorativo de fondo -->
-        <div style="position: absolute; top: -100px; right: -100px; width: 400px; height: 400px; background: radial-gradient(circle, rgba(255, 107, 53, 0.15) 0%, transparent 70%); pointer-events: none;"></div>
-        <div style="position: absolute; bottom: -80px; left: -80px; width: 300px; height: 300px; background: radial-gradient(circle, rgba(255, 140, 66, 0.1) 0%, transparent 70%); pointer-events: none;"></div>
-
-        <div class="container mx-auto px-6 relative z-10">
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16 items-center max-w-6xl mx-auto">
-            
-            <!-- Imagen PC vieja -->
-            <div class="flex justify-center fade-in-left">
-              <div class="revivi-pc-img-wrapper relative">
-                <img src="assets/images/pcvieja.png" alt="Computadora vieja que puede ser revivida" class="revivi-pc-img rounded-2xl" style="max-width: 100%; height: auto;" />
-                <!-- Badge sobre la imagen -->
-                <div class="absolute -top-4 -right-4 md:-top-5 md:-right-5 bg-gradient-to-r from-orange-500 to-orange-600 text-white rounded-full w-20 h-20 md:w-24 md:h-24 flex items-center justify-center shadow-lg revivi-badge">
-                  <div class="text-center leading-tight">
-                    <i class="fas fa-sync-alt text-lg md:text-xl"></i>
-                    <p class="text-xs font-bold mt-1">Nueva vida</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            
-            <!-- Texto y CTA -->
-            <div class="fade-in-right space-y-6 text-center md:text-left">
-              <div class="inline-flex items-center px-4 py-2 rounded-full border" style="background: rgba(255, 107, 53, 0.1); border-color: rgba(255, 107, 53, 0.3);">
-                <i class="fas fa-desktop text-sm mr-2" style="color: #ff6b35;"></i>
-                <span class="text-sm font-semibold" style="color: #ff6b35;">No la tires, ¡mejorala!</span>
-              </div>
-
-              <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight" style="color: #f4f4f4;">
-                ¿Tenés una computadora <span class="gradient-text">vieja?</span>
-              </h2>
-
-              <p class="text-xl md:text-2xl font-semibold" style="color: #ff8c42;">
-                Reviví tu PC. Dale una segunda oportunidad.
-              </p>
-
-              <p class="text-base md:text-lg leading-relaxed" style="color: #b8b8b8;">
-                Con un upgrade de SSD, más memoria RAM y una optimización completa, tu computadora puede volver a funcionar como nueva. Ahorrá dinero y sacale el máximo provecho a lo que ya tenés.
-              </p>
-
-              <ul class="space-y-3 text-left">
-                <li class="flex items-center">
-                  <div class="flex-shrink-0 w-6 h-6 rounded-full bg-gradient-to-r from-orange-500 to-orange-600 flex items-center justify-center mr-3">
-                    <i class="fas fa-check text-white text-xs"></i>
-                  </div>
-                  <span style="color: #d4d4d4;">Upgrade de SSD y memoria RAM</span>
-                </li>
-                <li class="flex items-center">
-                  <div class="flex-shrink-0 w-6 h-6 rounded-full bg-gradient-to-r from-orange-500 to-orange-600 flex items-center justify-center mr-3">
-                    <i class="fas fa-check text-white text-xs"></i>
-                  </div>
-                  <span style="color: #d4d4d4;">Limpieza profunda y cambio de pasta térmica</span>
-                </li>
-                <li class="flex items-center">
-                  <div class="flex-shrink-0 w-6 h-6 rounded-full bg-gradient-to-r from-orange-500 to-orange-600 flex items-center justify-center mr-3">
-                    <i class="fas fa-check text-white text-xs"></i>
-                  </div>
-                  <span style="color: #d4d4d4;">Windows limpio y optimizado al máximo</span>
-                </li>
-              </ul>
-
-              <div class="pt-4">
-                <a href="#contact" class="btn-primary text-base sm:text-lg px-8 sm:px-10 py-4 sm:py-5">
-                  <i class="fas fa-wrench mr-2"></i>
-                  <span>Consultá sin compromiso</span>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- SECCIÓN OFERTAS - Galería de productos -->
-      <!-- <section id="ofertas" class="section-padding relative" style="background: linear-gradient(180deg, #f8f9fa 0%, #ffffff 100%);">
-        <div class="container mx-auto px-6"> -->
-          <!-- Título -->
-          
-
-          <!-- Galería de ofertas -->
-          
-            <!-- <div class="oferta-item scale-in delay-100" onclick="openOfertaModal('assets/images/1.png', 'Notebook Dell Latitude 7490')">
-              <div class="oferta-img-wrapper">
-                <img src="assets/images/1.png" alt="Oferta - Notebook Dell Latitude 7490" loading="lazy" />
-                <div class="oferta-overlay">
-                  <i class="fas fa-search-plus text-3xl text-white"></i>
-                </div>
-              </div>
-            </div> -->
-            <!-- <div class="oferta-item scale-in delay-200" onclick="openOfertaModal('assets/images/2.png', 'Notebook Lenovo ThinkPad T430')">
-              <div class="oferta-img-wrapper">
-                <img src="assets/images/2.png" alt="Oferta - Notebook Lenovo ThinkPad T430" loading="lazy" />
-                <div class="oferta-overlay">
-                  <i class="fas fa-search-plus text-3xl text-white"></i>
-                </div>
-              </div>
-            </div> -->
-            <!-- <div class="oferta-item scale-in delay-300" onclick="openOfertaModal('assets/images/3.png', 'Notebook Lenovo ThinkPad L430')">
-              <div class="oferta-img-wrapper">
-                <img src="assets/images/3.png" alt="Oferta - Notebook Lenovo ThinkPad L430" loading="lazy" />
-                <div class="oferta-overlay">
-                  <i class="fas fa-search-plus text-3xl text-white"></i>
-                </div>
-              </div>
-            </div>
-            <div class="oferta-item scale-in delay-400" onclick="openOfertaModal('assets/images/4.png', 'Notebook HP ProBook 640 G1')">
-              <div class="oferta-img-wrapper">
-                <img src="assets/images/4.png" alt="Oferta - Notebook HP ProBook 640 G1" loading="lazy" />
-                <div class="oferta-overlay">
-                  <i class="fas fa-search-plus text-3xl text-white"></i>
-                </div>
-              </div>
-            </div>
-            <div class="oferta-item scale-in delay-500" onclick="openOfertaModal('assets/images/5.png', 'Computadora HP Prodesk 400 G3')">
-              <div class="oferta-img-wrapper">
-                <img src="assets/images/5.png" alt="Oferta - Computadora HP Prodesk 400 G3" loading="lazy" />
-                <div class="oferta-overlay">
-                  <i class="fas fa-search-plus text-3xl text-white"></i>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          CTA ofertas -->
-          <!-- <div class="text-center mt-12 fade-in delay-400">
-            <p class="text-lg mb-6" style="color: #606060;">¿Te interesa algún equipo? Consultanos precio y disponibilidad</p>
-            <a href="#contact" class="btn-primary text-lg px-10 py-5">
-              <i class="fab fa-whatsapp mr-2"></i>
-              <span>Consultar disponibilidad</span>
-            </a>
-          </div>
-        </div>
-      </section> -->
-
-      <!-- Modal para ver ofertas en grande -->
-      <div id="ofertaModal" class="oferta-modal" onclick="closeOfertaModal(event)">
-        <button class="oferta-modal-close" onclick="closeOfertaModal(event)" aria-label="Cerrar">
-          <i class="fas fa-times text-2xl"></i>
-        </button>
-        <img id="ofertaModalImg" src="" alt="" class="oferta-modal-img" />
-      </div>
-
-      <section id="webdev" class="section-padding" style="background-color: #151414;">
-        <div class="container mx-auto px-6">
-          <h2 class="text-4xl md:text-5xl font-bold text-center mb-8 fade-in" style="color: #f4f4f4;">
-            Desarrollo <span class="gradient-text">Web</span>
-          </h2>
-          <p class="text-xl text-center mb-16 max-w-3xl mx-auto fade-in delay-200" style="color: #878787;">
-            Creamos sitios web modernos que se ven bien en cualquier dispositivo y te ayudan a crecer
-          </p>
-          
-          <!-- Grid de servicios web - 2x2 -->
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto mb-12">
-            <div class="feature-card fade-in-left delay-100">
-              <div class="flex items-start gap-4">
-                <div class="service-icon" style="width: 60px; height: 60px; min-width: 60px;">
-                  <i class="fab fa-wordpress text-2xl text-white"></i>
-                </div>
-                <div>
-                  <h3 class="text-2xl font-bold mb-3" style="color: #f4f4f4;">Desarrollo y Soporte WordPress</h3>
-                  <p style="color: #878787;">
-                    Diseñamos y mantenemos sitios en WordPress: temas a medida, configuración de plugins, migraciones y optimización de rendimiento.
-                  </p>
-                  <ul class="mt-3 text-sm" style="color: #bfbfbf;">
-                    <li>• Temas personalizados y maquetado responsive</li>
-                    <li>• Configuración de plugins y funcionalidades</li>
-                    <li>• Seguridad, backups y actualizaciones gestionadas</li>
-                    <li>• Migraciones desde otra plataforma</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-
-            <div class="feature-card fade-in-left delay-300">
-              <div class="flex items-start gap-4">
-                <div class="service-icon" style="width: 60px; height: 60px; min-width: 60px;">
-                  <i class="fas fa-mobile-alt text-2xl text-white"></i>
-                </div>
-                <div>
-                  <h3 class="text-2xl font-bold mb-3" style="color: #f4f4f4;">Diseño Responsive</h3>
-                  <p style="color: #878787;">
-                    Tu página web se verá perfecta en celulares, tablets y computadoras. Usamos tecnologías modernas como HTML5, CSS3, JavaScript y React para crear sitios que cargan rápido y se ven increíbles.
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <div class="feature-card fade-in-left delay-500">
-              <div class="flex items-start gap-4">
-                <div class="service-icon" style="width: 60px; height: 60px; min-width: 60px;">
-                  <i class="fas fa-globe text-2xl text-white"></i>
-                </div>
-                <div>
-                  <h3 class="text-2xl font-bold mb-3" style="color: #f4f4f4;">Sitios Web Personalizados</h3>
-                  <p style="color: #878787;">
-                    Creamos tu página desde cero, pensada para tu negocio. Landing pages, sitios de presentación, portfolios y más. Todo optimizado para aparecer en Google y convertir visitas en clientes.
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <div class="feature-card fade-in-left delay-700">
-              <div class="flex items-start gap-4">
-                <div class="service-icon" style="width: 60px; height: 60px; min-width: 60px;">
-                  <i class="fas fa-rocket text-2xl text-white"></i>
-                </div>
-                <div>
-                  <h3 class="text-2xl font-bold mb-3" style="color: #f4f4f4;">Mejoramos tu Web Actual</h3>
-                  <p style="color: #878787;">
-                    ¿Ya tenés un sitio pero anda lento o no se ve bien? Lo revisamos y optimizamos para que funcione mejor, cargue más rápido y aparezca en las búsquedas de Google.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Animación centrada debajo -->
-          <div class="flex items-center justify-center fade-in delay-900">
-            <dotlottie-wc
-              src="https://lottie.host/d574364a-b84b-4710-9cca-de3e355da094/diWmRmTN3x.lottie"
-              style="width: 100%; max-width: 500px; height: 400px;"
-              autoplay
-              loop
-            ></dotlottie-wc>
-          </div>
-
-          <div class="bg-gradient-to-r from-orange-500 to-orange-600 rounded-2xl p-8 md:p-12 text-white text-center mt-16 max-w-4xl mx-auto fade-in delay-400">
-            <h3 class="text-3xl font-bold mb-4">¿Tenés una idea? ¡Hagámosla realidad!</h3>
-            <!-- <p class="text-xl mb-6 opacity-90">
-              Contanos tu proyecto y te ayudamos a llevarlo a internet
-            </p> -->
-            <a href="#contact" class="inline-block bg-white text-orange-600 px-8 py-4 rounded-full font-bold hover:bg-gray-100 transition-all duration-300">
-              Hablemos de tu proyecto
-            </a>
-          </div>
-        </div>
-      </section>
-
-      <section id="contact" class="section-padding" style="background-color: #f4f4f4;">
-        <div class="container mx-auto px-6">
-          <h2 class="text-4xl md:text-5xl font-bold text-center mb-16 fade-in" style="color: #151414;">
-            Contáctanos
-          </h2>
-          <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-start mb-12">
-            <div class="fade-in-left">
-              <h3 class="text-3xl font-bold mb-6" style="color: #ff6b35;">
-                ¡Hablemos! Contanos tu proyecto
-              </h3>
-              
-              <div id="formAlert" style="display: none;"></div>
-              
-              <form class="space-y-6" id="contactForm">
-                <div>
-                  <label for="name" class="block text-lg font-medium mb-2" style="color: #151414;">Nombre</label>
-                  <input
-                    type="text"
-                    id="name"
-                    name="name"
-                    required
-                    class="w-full px-4 py-3 rounded-lg border-2 border-gray-300 focus:border-orange-500 focus:outline-none transition-colors"
-                    placeholder="Tu nombre"
-                  />
-                </div>
-                <div>
-                  <label for="email" class="block text-lg font-medium mb-2" style="color: #151414;">Email</label>
-                  <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    required
-                    class="w-full px-4 py-3 rounded-lg border-2 border-gray-300 focus:border-orange-500 focus:outline-none transition-colors"
-                    placeholder="tu@email.com"
-                  />
-                </div>
-                <div>
-                  <label for="message" class="block text-lg font-medium mb-2" style="color: #151414;">Mensaje</label>
-                  <textarea
-                    id="message"
-                    name="message"
-                    rows="4"
-                    required
-                    class="w-full px-4 py-3 rounded-lg border-2 border-gray-300 focus:border-orange-500 focus:outline-none transition-colors"
-                    placeholder="Contanos en qué podemos ayudarte..."
-                  ></textarea>
-                </div>
-                <button type="submit" id="submitBtn" class="btn-primary w-full text-center">
-                  Enviar Mensaje
-                </button>
-              </form>
-            </div>
-            
-            <div class="flex items-center justify-center fade-in-right">
-              <dotlottie-wc
-                src="https://lottie.host/85296ea6-ef48-40c9-976b-6e822be9dfe5/TTRBfrNhGb.lottie"
-                style="width: 100%; max-width: 600px; height: 600px;"
-                autoplay
-                loop
-              ></dotlottie-wc>
-            </div>
-          </div>
-          
-          <!-- Sección de ubicación debajo -->
-          <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-8 fade-in">
-            <!-- Información de contacto -->
-            <div class="bg-white rounded-lg p-8 shadow-lg">
-              <h4 class="text-2xl font-bold mb-6" style="color: #ff6b35;">Nuestra Ubicación</h4>
-              <div class="space-y-4">
-                <p class="text-lg flex items-start" style="color: #878787;">
-                  <i class="fas fa-map-marker-alt text-orange-500 mr-3 mt-1"></i>
-                  <span>El Benteveo 1623, Ciudad Evita, Buenos Aires, Argentina</span>
-                </p>
-                <p class="text-lg flex items-start" style="color: #878787;">
-                  <i class="fas fa-phone text-orange-500 mr-3 mt-1"></i>
-                  <span>Contactanos por WhatsApp</span>
-                </p>
-                <p class="text-lg flex items-start" style="color: #878787;">
-                  <i class="fas fa-envelope text-orange-500 mr-3 mt-1"></i>
-                  <span>Completá el formulario de contacto</span>
-                </p>
-                <p class="text-lg flex items-start" style="color: #878787;">
-                  <i class="fas fa-clock text-orange-500 mr-3 mt-1"></i>
-                  <span>Atención de Lunes a Viernes</span>
-                </p>
-              </div>
-            </div>
-            
-            <!-- Mapa centrado cerca de la estación Querandi (sin dirección exacta) -->
-            <div class="rounded-lg overflow-hidden shadow-lg">
-              <iframe 
-                src="https://maps.google.com/maps?q=El+Benteveo+1623,+Ciudad+Evita,+Buenos+Aires&z=15&output=embed" 
-                width="100%" 
-                height="350" 
-                style="border:0;" 
-                allowfullscreen="" 
-                loading="lazy" 
-                referrerpolicy="no-referrer-when-downgrade"
-                title="Zona cerca Estación Querandi"
-              ></iframe>
-            </div>
-          </div>
-          </div>
-        </div>
-      </section>
-    </main>
-
-    <!-- WIDGET DE CHAT FLOTANTE DE WHATSAPP -->
-    <div id="whatsappWidget" class="whatsapp-widget">
-      <!-- Botón principal flotante -->
-      <div class="whatsapp-float" id="whatsappToggle" aria-label="Abrir chat de WhatsApp">
-        <i class="fab fa-whatsapp text-white text-3xl"></i>
-      </div>
-
-      <!-- Ventana de chat (inicialmente oculta) -->
-      <div class="whatsapp-chat-box" id="whatsappChatBox">
-        <!-- Encabezado del chat -->
-        <div class="whatsapp-chat-header">
-          <div class="flex items-center gap-3">
-            <div class="w-10 h-10 bg-white rounded-full flex items-center justify-center">
-              <i class="fab fa-whatsapp text-green-600 text-xl"></i>
-            </div>
-            <div>
-              <h4 class="font-semibold text-white">MIVENTECH</h4>
-              <p class="text-xs text-gray-200">Responde en minutos</p>
-            </div>
-          </div>
-          <button id="closeChat" class="text-white hover:text-gray-200 transition">
-            <i class="fas fa-times text-xl"></i>
-          </button>
-        </div>
-
-        <!-- Cuerpo del chat -->
-        <div class="whatsapp-chat-body">
-          <div class="whatsapp-message">
-            <p class="text-sm">¡Hola! 👋</p>
-            <p class="text-sm mt-2">¿En qué podemos ayudarte hoy?</p>
-            <span class="text-xs text-gray-500 mt-2 block">MIVENTECH</span>
-          </div>
-        </div>
-
-        <!-- Pie del chat con textarea -->
-        <div class="whatsapp-chat-footer">
-          <textarea 
-            id="whatsappMessage" 
-            placeholder="Escribe tu mensaje aquí..."
-            rows="2"
-            class="w-full px-4 py-3 border border-gray-300 rounded-lg resize-none focus:outline-none focus:border-green-500 text-sm"
-          ></textarea>
-          <button 
-            id="sendWhatsappBtn" 
-            class="mt-2 w-full bg-green-500 hover:bg-green-600 text-white font-semibold py-3 rounded-lg transition flex items-center justify-center gap-2"
-          >
-            <i class="fab fa-whatsapp text-lg"></i>
-            <span>Enviar por WhatsApp</span>
-          </button>
-        </div>
-      </div>
+      <button class="nav-toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="nav">
+        <span></span><span></span>
+      </button>
     </div>
+  </header>
 
-    <!-- FOOTER - Pie de página con información adicional -->
-    <footer class="py-12" style="background-color: #151414; overflow-x: hidden;">
-      <!-- Fondo oscuro para contraste -->
-      
-      <div class="container mx-auto px-6">
-        <!-- GRID DE COLUMNAS DEL FOOTER -->
-        <div class="grid md:grid-cols-3 gap-8 mb-8">
-          <!-- 3 columnas en desktop, 1 en móvil -->
-          
-          <!-- COLUMNA 1: LOGO Y DESCRIPCIÓN -->
-          <div>
-            <img src="/assets/images/logo1.png" alt="MivenTech Logo" style="max-height: 60px; width: auto;" />
-            <p style="color: #878787;">
-              Tu tecnología en las mejores manos. 
-            </p>
+  <main>
+
+    <!-- ============ HERO ============ -->
+    <section class="hero">
+      <div class="slides" id="heroSlides">
+      <div class="slide is-active" id="slide-tecnico" role="tabpanel" aria-label="Servicio técnico">
+      <div class="wrap hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow"><span class="pulse"></span>Servicio técnico · Ciudad Evita, La Matanza</p>
+          <h1>Diagnóstico honesto.<br><em>Reparación prolija.</em></h1>
+          <p class="lead">Reparamos, limpiamos y actualizamos PCs, notebooks y consolas. Antes de tocar nada te explicamos qué tiene tu equipo y cuánto cuesta arreglarlo.</p>
+          <div class="hero-actions">
+            <a href="#contacto" class="btn btn-accent">Pedí tu diagnóstico <span aria-hidden="true">→</span></a>
+            <a href="#servicios" class="btn btn-ghost">Ver servicios</a>
           </div>
-          
-          <!-- COLUMNA 2: ENLACES DE NAVEGACIÓN -->
-          <div>
-            <h4 class="text-xl font-bold text-white mb-4">Enlaces</h4>
-            <ul class="space-y-2">
-              <!-- Lista de enlaces internos del sitio -->
-              <li><a href="#home" class="hover:text-orange-500 transition-colors" style="color: #878787;">Home</a></li>
-              <li><a href="#about" class="hover:text-orange-500 transition-colors" style="color: #878787;">Sobre Nosotros</a></li>
-              <li><a href="#services" class="hover:text-orange-500 transition-colors" style="color: #878787;">Servicios</a></li>
-              <li><a href="#ofertas" class="hover:text-orange-500 transition-colors" style="color: #878787;">Ofertas</a></li>
-              <li><a href="#webdev" class="hover:text-orange-500 transition-colors" style="color: #878787;">Desarrollo Web</a></li>
-            </ul>
-          </div>
-          
-          <!-- COLUMNA 3: REDES SOCIALES (COMENTADA - Para uso futuro) -->
-          <!-- <div>
-            <h4 class="text-xl font-bold text-white mb-4">Seguinos</h4>
-            <div class="flex gap-4">
-              <a href="#" class="w-10 h-10 rounded-full flex items-center justify-center hover:bg-orange-500 transition-all" style="background-color: #878787;">
-                <i class="fab fa-facebook-f text-white"></i>
-              </a>
-              <a href="#" class="w-10 h-10 rounded-full flex items-center justify-center hover:bg-orange-500 transition-all" style="background-color: #878787;">
-                <i class="fab fa-instagram text-white"></i>
-              </a>
-              <a href="#" class="w-10 h-10 rounded-full flex items-center justify-center hover:bg-orange-500 transition-all" style="background-color: #878787;">
-                <i class="fab fa-linkedin-in text-white"></i>
-              </a>
-            </div> -->
-          </div>
+          <ul class="hero-facts">
+            <li><strong>Informe</strong> por escrito</li>
+            <li><strong>Presupuesto</strong> antes de reparar</li>
+            <li><strong>Atención</strong> personalizada</li>
+          </ul>
         </div>
-        
-        <!-- COPYRIGHT - Línea inferior del footer -->
-        <div class="border-t pt-8 text-center" style="border-color: #878787;">
-          <!-- Línea separadora superior -->
-          <p style="color: #878787;">© 2025 MivenTech. Todos los derechos reservados.</p>
+
+        <!-- Orden de trabajo ilustrativa -->
+        <div class="ticket" aria-label="Ejemplo de orden de trabajo">
+          <div class="ticket-head">
+            <span class="mono">ORDEN DE TRABAJO</span>
+            <span class="mono ticket-no">#MV-0427</span>
+          </div>
+          <dl class="ticket-meta">
+            <div><dt>Equipo</dt><dd>Notebook 14"</dd></div>
+            <div><dt>Problema</dt><dd>Lenta, se recalienta</dd></div>
+          </dl>
+          <ol class="ticket-steps" id="ticketSteps">
+            <li><span class="chk"></span>Recepción del equipo</li>
+            <li><span class="chk"></span>Diagnóstico + informe</li>
+            <li><span class="chk"></span>Limpieza y pasta térmica</li>
+            <li><span class="chk"></span>Cambio a SSD + Windows limpio</li>
+            <li><span class="chk"></span>Pruebas finales</li>
+          </ol>
+          <div class="ticket-foot">
+            <span class="mono">ESTADO</span>
+            <span class="status" id="ticketStatus">En proceso</span>
+          </div>
+          <div class="ticket-bar"><span id="ticketBar"></span></div>
         </div>
       </div>
-    </footer>
+      </div>
 
-    <!-- SCRIPTS JAVASCRIPT - Al final para mejor rendimiento -->
-    
-    <!-- SCRIPT LOTTIE - Para animaciones vectoriales interactivas -->
-    <script src="https://unpkg.com/@lottiefiles/dotlottie-wc@0.8.5/dist/dotlottie-wc.js" type="module"></script>
-    
-    <!-- SCRIPT PRINCIPAL - Funcionalidades JavaScript personalizadas -->
-    <script src="assets/js/main.js?v=1.1"></script>
-    
-  </body>
-  <!-- Fin del documento HTML -->
+      <div class="slide" id="slide-web" role="tabpanel" aria-label="Desarrollo web" aria-hidden="true">
+      <div class="wrap hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow"><span class="pulse pulse-accent"></span>Desarrollo web · WordPress y sitios a medida</p>
+          <h2 class="h1">Tu negocio,<br><em>online y a medida.</em></h2>
+          <p class="price-pill"><span>Landing page</span> <strong>$350.000</strong> diseño + desarrollo</p>
+          <p class="lead">Una página simple y rápida para que tus clientes te encuentren y te escriban. Y si necesitás algo más grande, también hacemos sitios completos en WordPress.</p>
+          <div class="hero-actions">
+            <a href="#web" class="btn btn-accent">Ver oferta landing <span aria-hidden="true">→</span></a>
+            <a href="#contacto" class="btn btn-ghost">Cotizá tu proyecto</a>
+          </div>
+          <ul class="hero-facts">
+            <li><strong>Responsive</strong> en todo dispositivo</li>
+            <li><strong>Optimizado</strong> para Google</li>
+            <li><strong>WordPress</strong> o código a medida</li>
+          </ul>
+        </div>
+
+        <div class="build" aria-hidden="true">
+          <div class="build-browser">
+            <div class="browser-bar"><i></i><i></i><i></i><span>tunegocio.com.ar</span></div>
+            <div class="build-page">
+              <div class="bp-nav"><b></b><span></span><span></span><span></span></div>
+              <div class="bp-hero">
+                <div class="bp-text"><b></b><b class="s"></b><i></i><em></em></div>
+                <div class="bp-img"></div>
+              </div>
+              <div class="bp-cards"><div></div><div></div><div></div></div>
+            </div>
+          </div>
+          <div class="build-code">
+            <div class="code-head mono">index.html</div>
+<pre><code><span class="t">&lt;header&gt;</span>
+  <span class="t">&lt;nav</span> <span class="a">class</span>=<span class="s">"menu"</span><span class="t">&gt;</span>
+<span class="t">&lt;section</span> <span class="a">class</span>=<span class="s">"hero"</span><span class="t">&gt;</span>
+  <span class="t">&lt;h1&gt;</span>Tu negocio<span class="t">&lt;/h1&gt;</span>
+<span class="t">&lt;div</span> <span class="a">class</span>=<span class="s">"cards"</span><span class="t">&gt;</span></code></pre>
+          </div>
+          <div class="build-phone">
+            <div class="ph-notch"></div>
+            <div class="ph-screen"><b></b><div class="ph-img"></div><i></i><i></i><span></span></div>
+          </div>
+        </div>
+      </div>
+      </div>
+
+      </div>
+
+      <div class="wrap slider-nav" role="tablist" aria-label="Destacados">
+        <button class="slider-tab is-active" role="tab" aria-selected="true" aria-controls="slide-tecnico" data-slide="0">
+          <span class="mono">01</span> Servicio técnico <span class="slider-progress"><span></span></span>
+        </button>
+        <button class="slider-tab" role="tab" aria-selected="false" aria-controls="slide-web" data-slide="1">
+          <span class="mono">02</span> Desarrollo web <span class="slider-progress"><span></span></span>
+        </button>
+      </div>
+
+      <div class="strip" aria-hidden="true">
+        <div class="strip-track">
+          <span>PC de escritorio</span><span>Notebooks</span><span>All in One</span><span>Consolas</span><span>Upgrade a SSD</span><span>Memoria RAM</span><span>WordPress</span><span>Sitios web</span>
+          <span>PC de escritorio</span><span>Notebooks</span><span>All in One</span><span>Consolas</span><span>Upgrade a SSD</span><span>Memoria RAM</span><span>WordPress</span><span>Sitios web</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ SERVICIOS ============ -->
+    <section class="section" id="servicios">
+      <div class="wrap">
+        <header class="section-head reveal">
+          <span class="mono label">01 — Servicios</span>
+          <h2>Lo que hacemos en el taller</h2>
+          <p>Trabajos claros, con precio cerrado antes de empezar. Si tu caso no está en la lista, consultanos igual.</p>
+        </header>
+
+        <div class="services">
+          <!-- Destacado -->
+          <article class="service-featured reveal">
+            <div class="sf-top">
+              <span class="tag tag-accent">El más pedido</span>
+              <span class="mono sf-code">SRV-03</span>
+            </div>
+            <h3>Servicio Integral Completo</h3>
+            <p>El paquete para que tu equipo quede como nuevo. Hacemos todo en una sola visita.</p>
+            <ul class="checklist">
+              <li>Limpieza de hardware y pasta térmica</li>
+              <li>Formateo + Windows + programas básicos</li>
+              <li>Backup de datos hasta 100 GB incluido</li>
+              <li>Cambio e instalación de SSD</li>
+            </ul>
+            <div class="sf-foot">
+              <div class="tags"><span class="tag">PC</span><span class="tag">Notebook</span><span class="tag">AIO</span></div>
+              <a href="#contacto" class="btn btn-accent btn-sm">Consultar precio</a>
+            </div>
+          </article>
+
+          <!-- Lista -->
+          <ol class="service-list">
+            <li class="reveal">
+              <span class="mono num">SRV-01</span>
+              <div>
+                <h3>Diagnóstico / Revisión</h3>
+                <p>Revisamos hardware, software, temperatura, disco y rendimiento. Te entregamos un informe con el estado del equipo y el presupuesto de reparación.</p>
+                <div class="tags"><span class="tag">PC</span><span class="tag">Notebook</span><span class="tag">AIO</span></div>
+              </div>
+            </li>
+            <li class="reveal">
+              <span class="mono num">SRV-02</span>
+              <div>
+                <h3>Formateo e instalación de Windows</h3>
+                <p>Instalación limpia con drivers, actualizaciones y configuración básica. <strong>No incluye respaldo de datos.</strong></p>
+                <div class="tags"><span class="tag">PC</span><span class="tag">Notebook</span><span class="tag">AIO</span><span class="tag">Consolas</span></div>
+              </div>
+            </li>
+            <li class="reveal">
+              <span class="mono num">SRV-04</span>
+              <div>
+                <h3>Limpieza + pasta térmica</h3>
+                <p>Desarmado, limpieza interna profunda y cambio de pasta térmica. Para equipos que calientan, hacen ruido o andan lentos.</p>
+                <div class="tags"><span class="tag">PC</span><span class="tag">Notebook</span><span class="tag">AIO</span><span class="tag">Consolas</span></div>
+              </div>
+            </li>
+            <li class="reveal">
+              <span class="mono num">SRV-05</span>
+              <div>
+                <h3>Inicialización de equipo nuevo</h3>
+                <p>Configuramos Windows e instalamos lo básico (navegador, Office, antivirus) para que lo uses desde el primer día.</p>
+                <div class="tags"><span class="tag">PC</span><span class="tag">Notebook</span><span class="tag">AIO</span></div>
+              </div>
+            </li>
+            <li class="reveal">
+              <span class="mono num">SRV-06</span>
+              <div>
+                <h3>Backup de datos extra</h3>
+                <p>Respaldo adicional por cada 100 GB que superen lo incluido. Tus fotos y documentos quedan a salvo antes de cualquier intervención.</p>
+                <div class="tags"><span class="tag">PC</span><span class="tag">Notebook</span><span class="tag">AIO</span></div>
+              </div>
+            </li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ PROCESO ============ -->
+    <section class="section section-alt" id="proceso">
+      <div class="wrap">
+        <header class="section-head reveal">
+          <span class="mono label">02 — Cómo trabajamos</span>
+          <h2>Sin sorpresas, de principio a fin</h2>
+        </header>
+        <ol class="steps">
+          <li class="reveal">
+            <span class="step-n">1</span>
+            <h3>Nos contás qué pasa</h3>
+            <p>Por WhatsApp o el formulario. Te orientamos y coordinamos la entrega del equipo.</p>
+          </li>
+          <li class="reveal">
+            <span class="step-n">2</span>
+            <h3>Diagnóstico e informe</h3>
+            <p>Revisamos el equipo a fondo y te pasamos por escrito qué encontramos.</p>
+          </li>
+          <li class="reveal">
+            <span class="step-n">3</span>
+            <h3>Aprobás el presupuesto</h3>
+            <p>No hacemos ningún trabajo sin tu OK. Vos decidís qué se arregla.</p>
+          </li>
+          <li class="reveal">
+            <span class="step-n">4</span>
+            <h3>Retirás funcionando</h3>
+            <p>Lo probamos antes de entregarlo y te explicamos lo que se hizo.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ============ REVIVÍ TU PC ============ -->
+    <section class="section section-dark" id="revivi">
+      <div class="wrap revivi-grid">
+        <div class="revivi-copy reveal">
+          <span class="mono label label-light">03 — Reviví tu PC</span>
+          <h2>No la tires.<br><em>Mejorala.</em></h2>
+          <p>Una computadora de hace unos años muchas veces solo necesita un SSD, algo más de RAM y una buena limpieza para volver a andar bien. Sale bastante menos que comprar una nueva.</p>
+          <a href="#contacto" class="btn btn-accent">Consultá sin compromiso <span aria-hidden="true">→</span></a>
+        </div>
+
+        <div class="compare reveal">
+          <figure class="compare-img">
+            <img src="assets/images/pcvieja.png" alt="Computadora antigua lista para ser actualizada" loading="lazy" onerror="this.parentElement.style.display='none'" />
+          </figure>
+          <table class="spec">
+            <thead>
+              <tr><th></th><th>Antes</th><th>Después</th></tr>
+            </thead>
+            <tbody>
+              <tr><th>Disco</th><td>HDD mecánico</td><td>SSD</td></tr>
+              <tr><th>Memoria</th><td>Justa</td><td>Ampliada</td></tr>
+              <tr><th>Temperatura</th><td>Pasta seca, polvo</td><td>Limpia, pasta nueva</td></tr>
+              <tr><th>Sistema</th><td>Lento y cargado</td><td>Windows limpio</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ DESARROLLO WEB ============ -->
+    <section class="section web" id="web">
+      <div class="wrap">
+        <header class="web-head reveal">
+          <div>
+            <span class="mono label">04 — Desarrollo web</span>
+            <h2>Tu negocio, también<br><em>en internet.</em></h2>
+          </div>
+          <p>Si tus clientes te buscan en Google y no te encuentran, se van con otro. Te armamos una página clara, rápida y pensada para que te escriban.</p>
+        </header>
+
+        <!-- OFERTA LANDING -->
+        <article class="offer reveal" aria-labelledby="offer-title">
+          <div class="offer-info">
+            <div class="offer-top">
+              <span class="tag tag-accent">Oferta</span>
+              <span class="mono offer-code">WEB-01</span>
+            </div>
+            <h3 id="offer-title">Landing Page<br>para tu negocio</h3>
+            <p class="offer-sub">Una página simple y llamativa para que tus clientes te encuentren, sepan qué hacés y te escriban por WhatsApp.</p>
+
+            <div class="price">
+              <span class="price-cur">$</span><span class="price-num">350.000</span>
+              <span class="price-note">Diseño + desarrollo<br>Precio cerrado</span>
+            </div>
+
+            <ul class="checklist offer-list">
+              <li>Una página con hasta 4 secciones</li>
+              <li>Diseño personalizado con tu logo y colores</li>
+              <li>Se adapta a celular, tablet y compu</li>
+              <li>Botón de WhatsApp y ubicación en Google Maps</li>
+              <li>Títulos y descripción para Google</li>
+              <li>Una ronda de cambios incluida</li>
+            </ul>
+
+            <div class="offer-cta">
+              <a href="#" class="btn btn-accent" data-wa="Hola! Me interesa la Landing Page de $350.000. ¿Me pasás más info?" target="_blank" rel="noopener">Quiero mi landing <span aria-hidden="true">→</span></a>
+              <a href="#contacto" class="btn btn-ghost-light">Prefiero el formulario</a>
+            </div>
+
+            <div class="offer-extras">
+              <p class="mono">Extras opcionales</p>
+              <ul>
+                <li>Perfil de Google Business (Maps)</li>
+                <li>Hosting y dominio gestionados</li>
+                <li>Mantenimiento mensual</li>
+              </ul>
+            </div>
+            <p class="offer-fine">Dominio y hosting a cargo del cliente. Textos y fotos los aporta el cliente.</p>
+          </div>
+
+          <div class="offer-visual" aria-hidden="true">
+            <div class="lp-device">
+              <div class="browser-bar"><i></i><i></i><i></i><span>tunegocio.com.ar</span></div>
+              <div class="lp-viewport">
+                <div class="lp-scroll">
+                  <section class="lp lp-hero">
+                    <div class="lp-nav"><b></b><span></span><span></span><span></span></div>
+                    <div class="lp-hero-body">
+                      <div><b class="w80"></b><b class="w60"></b><i></i><i class="w70"></i><em>Contactanos</em></div>
+                      <div class="lp-photo"></div>
+                    </div>
+                  </section>
+                  <section class="lp lp-services">
+                    <b class="w40 c"></b>
+                    <div class="lp-grid"><div><span></span><i></i><i></i></div><div><span></span><i></i><i></i></div><div><span></span><i></i><i></i></div></div>
+                  </section>
+                  <section class="lp lp-about">
+                    <div class="lp-photo sq"></div>
+                    <div><b class="w60"></b><i></i><i></i><i class="w70"></i></div>
+                  </section>
+                  <section class="lp lp-contact">
+                    <div class="lp-map"><span></span></div>
+                    <div><b class="w60"></b><i></i><i class="w70"></i><em class="wa">WhatsApp</em></div>
+                  </section>
+                </div>
+              </div>
+            </div>
+
+            <ol class="lp-notes">
+              <li><span>01</span>Portada con tu propuesta</li>
+              <li><span>02</span>Tus servicios o productos</li>
+              <li><span>03</span>Quién sos</li>
+              <li><span>04</span>Ubicación y contacto</li>
+            </ol>
+
+            <div class="lp-chip lp-chip-1"><span class="dot"></span>Nuevo mensaje de WhatsApp</div>
+            <div class="lp-chip lp-chip-2">📱 Responsive</div>
+          </div>
+        </article>
+
+        <!-- Pasos -->
+        <ol class="web-steps reveal">
+          <li><span class="mono">01</span><div><h3>Charlamos</h3><p>Nos contás de tu negocio y qué querés mostrar.</p></div></li>
+          <li><span class="mono">02</span><div><h3>Diseñamos</h3><p>Te mostramos la propuesta y la ajustamos con vos.</p></div></li>
+          <li><span class="mono">03</span><div><h3>Publicamos</h3><p>Tu página queda online, lista para compartir.</p></div></li>
+        </ol>
+
+        <!-- Otros servicios web -->
+        <div class="web-more">
+          <p class="mono label">¿Necesitás algo más completo?</p>
+          <ul class="web-list">
+            <li class="reveal">
+              <span class="wl-ico" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.8"/></svg></span>
+              <h3>WordPress: desarrollo y soporte</h3>
+              <p>Temas a medida, plugins, migraciones, seguridad, backups y actualizaciones.</p>
+            </li>
+            <li class="reveal">
+              <span class="wl-ico" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 7l-5 5 5 5M16 7l5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+              <h3>Sitios a medida</h3>
+              <p>Sitios institucionales y portfolios de varias páginas, pensados para tu negocio.</p>
+            </li>
+            <li class="reveal">
+              <span class="wl-ico" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="7" y="3" width="10" height="18" rx="2" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M11 18h2" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></span>
+              <h3>Diseño responsive</h3>
+              <p>HTML, CSS, JavaScript y React. Se ve bien en celular, tablet y compu.</p>
+            </li>
+            <li class="reveal">
+              <span class="wl-ico" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M13 3L4 14h7l-1 7 9-11h-7l1-7z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg></span>
+              <h3>Mejoramos tu web actual</h3>
+              <p>Si tu sitio anda lento o se ve mal, lo optimizamos para que cargue rápido y aparezca en Google.</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CONTACTO ============ -->
+    <section class="section section-alt" id="contacto">
+      <div class="wrap contact-grid">
+        <div class="contact-form-wrap reveal">
+          <span class="mono label">05 — Contacto</span>
+          <h2>Contanos qué necesitás</h2>
+          <p class="muted">Te respondemos a la brevedad. Si es urgente, escribinos por WhatsApp.</p>
+
+          <div id="formAlert" class="alert" role="status" hidden></div>
+
+          <form id="contactForm" class="form" novalidate>
+            <div class="field">
+              <label for="name">Nombre</label>
+              <input type="text" id="name" name="name" required autocomplete="name" placeholder="Tu nombre" />
+            </div>
+            <div class="field">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" required autocomplete="email" placeholder="tu@email.com" />
+            </div>
+            <div class="field">
+              <label for="message">Mensaje</label>
+              <textarea id="message" name="message" rows="5" required placeholder="Ej: mi notebook tarda mucho en prender y se calienta"></textarea>
+            </div>
+            <button type="submit" id="submitBtn" class="btn btn-accent btn-block">Enviar mensaje</button>
+          </form>
+        </div>
+
+        <aside class="contact-card reveal">
+          <a class="wa-card" id="waCard" href="#" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.9 9.9 0 0 0 4.74 1.21c5.46 0 9.91-4.45 9.91-9.91C21.95 6.45 17.5 2 12.04 2Zm5.8 14.04c-.24.69-1.42 1.32-1.96 1.37-.5.05-1.13.07-1.83-.11-.42-.13-.96-.31-1.65-.61-2.9-1.25-4.79-4.17-4.94-4.36-.14-.19-1.18-1.57-1.18-3 0-1.43.75-2.13 1.02-2.42.26-.29.58-.36.77-.36h.55c.18 0 .42-.07.65.5.24.58.82 2 .89 2.15.07.14.12.31.02.5-.1.19-.14.31-.29.48-.14.17-.3.38-.43.5-.14.14-.29.3-.13.59.17.29.74 1.22 1.59 1.98 1.09.97 2.01 1.27 2.3 1.42.29.14.46.12.62-.07.17-.19.72-.84.91-1.13.19-.29.38-.24.65-.14.26.1 1.68.79 1.97.94.29.14.48.22.55.34.07.12.07.69-.17 1.37Z"/></svg>
+            <div>
+              <strong>Escribinos por WhatsApp</strong>
+              <span>La forma más rápida de consultar</span>
+            </div>
+            <span aria-hidden="true">→</span>
+          </a>
+
+          <dl class="info">
+            <div><dt class="mono">Dirección</dt><dd>El Benteveo 1623, Ciudad Evita, Buenos Aires</dd></div>
+            <div><dt class="mono">Horario</dt><dd>Lunes a viernes</dd></div>
+          </dl>
+
+          <div class="map">
+            <iframe src="https://maps.google.com/maps?q=El+Benteveo+1623,+Ciudad+Evita,+Buenos+Aires&z=15&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Ubicación de MIVENTECH"></iframe>
+          </div>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="site-footer">
+    <div class="wrap footer-inner">
+      <div>
+        <span class="brand-text footer-brand"><span class="brand-dot"></span>miventech</span>
+        <p>Servicio técnico y desarrollo web. Ciudad Evita, La Matanza.</p>
+      </div>
+      <nav class="footer-nav" aria-label="Pie de página">
+        <a href="#servicios">Servicios</a>
+        <a href="#proceso">Cómo trabajamos</a>
+        <a href="#revivi">Reviví tu PC</a>
+        <a href="#web">Desarrollo web</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+      <p class="copy mono">© <span id="year">2026</span> MIVENTECH</p>
+    </div>
+  </footer>
+
+  <!-- Botón flotante de WhatsApp -->
+  <a class="wa-float" id="waFloat" href="#" target="_blank" rel="noopener" aria-label="Escribinos por WhatsApp">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.9 9.9 0 0 0 4.74 1.21c5.46 0 9.91-4.45 9.91-9.91C21.95 6.45 17.5 2 12.04 2Zm5.8 14.04c-.24.69-1.42 1.32-1.96 1.37-.5.05-1.13.07-1.83-.11-.42-.13-.96-.31-1.65-.61-2.9-1.25-4.79-4.17-4.94-4.36-.14-.19-1.18-1.57-1.18-3 0-1.43.75-2.13 1.02-2.42.26-.29.58-.36.77-.36h.55c.18 0 .42-.07.65.5.24.58.82 2 .89 2.15.07.14.12.31.02.5-.1.19-.14.31-.29.48-.14.17-.3.38-.43.5-.14.14-.29.3-.13.59.17.29.74 1.22 1.59 1.98 1.09.97 2.01 1.27 2.3 1.42.29.14.46.12.62-.07.17-.19.72-.84.91-1.13.19-.29.38-.24.65-.14.26.1 1.68.79 1.97.94.29.14.48.22.55.34.07.12.07.69-.17 1.37Z"/></svg>
+  </a>
+
+  <script src="assets/js/main.js?v=2.3"></script>
+</body>
 </html>
